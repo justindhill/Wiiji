@@ -15,7 +15,6 @@
 		B2707EC40DB31C2800FC34FC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; };
 		B2707EC50DB31C2800FC34FC /* wiimote_manager.m in Sources */ = {isa = PBXBuildFile; fileRef = B226F1A50D9A8540001374F1 /* wiimote_manager.m */; };
 		B2707EC60DB31C3E00FC34FC /* com.veltrop.taylor.Wiiji.defaults.plist in Resources */ = {isa = PBXBuildFile; fileRef = B22FA0AB0DAC9AF00039AB3D /* com.veltrop.taylor.Wiiji.defaults.plist */; };
-		B2707EC70DB31C3E00FC34FC /* MainMenu.nib in Resources */ = {isa = PBXBuildFile; fileRef = 29B97318FDCFA39411CA2CEA /* MainMenu.nib */; };
 		B2707EC80DB31C3E00FC34FC /* wiijoy_icon_12.png in Resources */ = {isa = PBXBuildFile; fileRef = B26B65F80DA90E3700BD58B4 /* wiijoy_icon_12.png */; };
 		B2707EC90DB31C3E00FC34FC /* help-scanning.png in Resources */ = {isa = PBXBuildFile; fileRef = B26B66160DA91D8A00BD58B4 /* help-scanning.png */; };
 		B2707ECA0DB31C3E00FC34FC /* help-rescan.png in Resources */ = {isa = PBXBuildFile; fileRef = B26B66170DA91D8A00BD58B4 /* help-rescan.png */; };
@@ -24,6 +23,7 @@
 		B2707ECD0DB31C3E00FC34FC /* wiijoy_icon_1.png in Resources */ = {isa = PBXBuildFile; fileRef = B2E109780DA9FDA9003E963D /* wiijoy_icon_1.png */; };
 		B2707ECE0DB31C3E00FC34FC /* wiijoy_icon_2.png in Resources */ = {isa = PBXBuildFile; fileRef = B2E109790DA9FDA9003E963D /* wiijoy_icon_2.png */; };
 		B2707ECF0DB31C3E00FC34FC /* appicon.icns in Resources */ = {isa = PBXBuildFile; fileRef = B24C5B9B0DAB16AF00E65D6A /* appicon.icns */; };
+		FC9F6696182869B000DD603C /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC9F6694182869B000DD603C /* MainMenu.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,7 +61,6 @@
 /* Begin PBXFileReference section */
 		1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		29B97319FDCFA39411CA2CEA /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = English.lproj/MainMenu.nib; sourceTree = "<group>"; };
 		32CA4F630368D1EE00C91783 /* wiipad_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = wiipad_Prefix.pch; sourceTree = "<group>"; };
 		B226F1A40D9A8540001374F1 /* wiimote_manager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = wiimote_manager.h; sourceTree = "<group>"; };
 		B226F1A50D9A8540001374F1 /* wiimote_manager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = wiimote_manager.m; sourceTree = "<group>"; };
@@ -82,6 +81,7 @@
 		B2E109780DA9FDA9003E963D /* wiijoy_icon_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = wiijoy_icon_1.png; path = Art/wiijoy_icon_1.png; sourceTree = "<group>"; };
 		B2E109790DA9FDA9003E963D /* wiijoy_icon_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = wiijoy_icon_2.png; path = Art/wiijoy_icon_2.png; sourceTree = "<group>"; };
 		B2ED29370DA210550005EC9A /* WiiRemote.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WiiRemote.framework; path = WiiRemoteFramework/build/Release/WiiRemote.framework; sourceTree = "<group>"; };
+		FC9F6695182869B000DD603C /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/MainMenu.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +103,7 @@
 				B23A19DA0DB77E5400E28F9C /* wiimote_types.h */,
 				B226F1A40D9A8540001374F1 /* wiimote_manager.h */,
 				B226F1A50D9A8540001374F1 /* wiimote_manager.m */,
+				FC9F6694182869B000DD603C /* MainMenu.xib */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -145,7 +146,6 @@
 				B24C5B9B0DAB16AF00E65D6A /* appicon.icns */,
 				B28B4D690DB2560D005F5A8D /* Wiiji-Info.plist */,
 				B22FA0AB0DAC9AF00039AB3D /* com.veltrop.taylor.Wiiji.defaults.plist */,
-				29B97318FDCFA39411CA2CEA /* MainMenu.nib */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -261,7 +261,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				B2707EC60DB31C3E00FC34FC /* com.veltrop.taylor.Wiiji.defaults.plist in Resources */,
-				B2707EC70DB31C3E00FC34FC /* MainMenu.nib in Resources */,
 				B2707EC80DB31C3E00FC34FC /* wiijoy_icon_12.png in Resources */,
 				B2707EC90DB31C3E00FC34FC /* help-scanning.png in Resources */,
 				B2707ECA0DB31C3E00FC34FC /* help-rescan.png in Resources */,
@@ -272,6 +271,7 @@
 				B2707ECF0DB31C3E00FC34FC /* appicon.icns in Resources */,
 				B24CE9B10DBB264D007C34A8 /* image.png in Resources */,
 				B250A18C0DC855120010C7B2 /* ChangeLog.txt in Resources */,
+				FC9F6696182869B000DD603C /* MainMenu.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -290,12 +290,12 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		29B97318FDCFA39411CA2CEA /* MainMenu.nib */ = {
+		FC9F6694182869B000DD603C /* MainMenu.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
-				29B97319FDCFA39411CA2CEA /* English */,
+				FC9F6695182869B000DD603C /* English */,
 			);
-			name = MainMenu.nib;
+			name = MainMenu.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -304,6 +304,7 @@
 		B28B4D6A0DB2560E005F5A8D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				COPY_PHASE_STRIP = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -337,6 +338,7 @@
 		B28B4D6B0DB2560E005F5A8D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				COPY_PHASE_STRIP = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -369,10 +371,11 @@
 		C01FCF4F08A954540054247B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
 				GCC_OPTIMIZATION_LEVEL = 3;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.4;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				PREBINDING = NO;
 				SDKROOT = "$(DEVELOPER_SDK_DIR)/MacOSX10.6.sdk";
 			};
@@ -385,10 +388,11 @@
 					ppc,
 					i386,
 				);
+				CLANG_ENABLE_OBJC_ARC = YES;
 				GCC_OPTIMIZATION_LEVEL = 3;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.4;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				PREBINDING = NO;
 				SDKROOT = "$(DEVELOPER_SDK_DIR)/MacOSX10.6.sdk";
 			};

@@ -131,7 +131,6 @@ int bindings[maxNumWiimotes][WiiNumberOfButtons] = {
 	}
 	else {
 		[_wii_discovery setDelegate:self];
-		[_wii_discovery retain];
 	}
 	
 	int i;
@@ -151,7 +150,6 @@ int bindings[maxNumWiimotes][WiiNumberOfButtons] = {
 	for (i=0; i < maxNumWiimotes; i++) {
 		if (_wiimote[i] != nil) {
 			[_wiimote[i] closeConnection]; 
-			[_wiimote[i] release];
 		}
 	}
 
@@ -160,7 +158,6 @@ int bindings[maxNumWiimotes][WiiNumberOfButtons] = {
 	//		[_wii_discovery stop];
 			[_wii_discovery close];
 		}
-		[_wii_discovery release];
 	}
 	
 	[self closeVirtualDriver];
@@ -173,7 +170,6 @@ int bindings[maxNumWiimotes][WiiNumberOfButtons] = {
 - (void) dealloc
 {
 	[self cleanUp];
-	[super dealloc];
 }
 
 -(void)awakeFromNib
@@ -189,11 +185,10 @@ int bindings[maxNumWiimotes][WiiNumberOfButtons] = {
 	ProcessSerialNumber psn = {0, kNoProcess};
 	// get the path to our app
 	while (!path && !GetNextProcess(&psn)) {	
-		info = (NSDictionary *)ProcessInformationCopyDictionary(&psn, kProcessDictionaryIncludeAllInformationMask);
+		info = (__bridge NSDictionary *)ProcessInformationCopyDictionary(&psn, kProcessDictionaryIncludeAllInformationMask);
 		if ([@"com.veltrop.taylor.Wiiji" isEqualTo:[info objectForKey:(NSString *)kCFBundleIdentifierKey]]) {
 			path = [[info valueForKey:(NSString *)kCFBundleExecutableKey] copy];
 		}
-		[info release];
 	}
 
 	if (path) {
@@ -203,12 +198,8 @@ int bindings[maxNumWiimotes][WiiNumberOfButtons] = {
 		icons[1] = [[NSImage alloc] initWithContentsOfFile:[newpath stringByAppendingString:@"/Resources/wiijoy_icon_1.png"]];
 		icons[2] = [[NSImage alloc] initWithContentsOfFile:[newpath stringByAppendingString:@"/Resources/wiijoy_icon_12.png"]];
 		icons[3] = [[NSImage alloc] initWithContentsOfFile:[newpath stringByAppendingString:@"/Resources/wiijoy_icon_2.png"]];
-		for (i = 0; i < 4; i++)
-			[icons[i] retain];
 		
 		[[NSUserDefaults standardUserDefaults] registerDefaults:[NSDictionary dictionaryWithContentsOfFile:[newpath stringByAppendingString:@"/Resources/com.veltrop.taylor.Wiiji.defaults.plist"]]];
-		[newpath release];
-		[path release];
 	}
 	else {
 		NSRunCriticalAlertPanel(@"Can't Initialize", 
@@ -218,25 +209,24 @@ int bindings[maxNumWiimotes][WiiNumberOfButtons] = {
 
 	NSStatusBar *bar = [NSStatusBar systemStatusBar];
 	wii_menu = [bar statusItemWithLength:35];//NSVariableStatusItemLength , NSSquareStatusItemLength
-	[wii_menu retain];
 
 	if (!icons[0])
 		[wii_menu setTitle: @"Wii"];
 	[wii_menu setHighlightMode:YES];
-	[wii_menu setMenu:mainMenu];	
+	[wii_menu setMenu:self.mainMenu];
 	[wii_menu setImage:icons[0]];
 		
-	_isUsingKBEmu = [KBEnabledButton state] == NSOnState;
-	[self setTable:keyTable isEnabled:_isUsingKBEmu];
+	_isUsingKBEmu = [self.KBEnabledButton state] == NSOnState;
+	[self setTable:self.keyTable isEnabled:_isUsingKBEmu];
 	if (_isUsingKBEmu)
-		[prefHelpText setStringValue:prefHelpString];
+		[self.prefHelpText setStringValue:prefHelpString];
 	else 
-		[prefHelpText setStringValue:@""];
+		[self.prefHelpText setStringValue:@""];
 		
 	[self loadKeyBindings];
 
 	for (i = 0; i < maxNumWiimotes; i++) {
-		NSMenuItem* item = [mainMenu itemWithTag:i+500];
+		NSMenuItem* item = [self.mainMenu itemWithTag:i+500];
 		if (item) {
 			[item setEnabled:NO];
 			[item setState:NSOffState];
@@ -273,7 +263,7 @@ int bindings[maxNumWiimotes][WiiNumberOfButtons] = {
 				bindings[i][j] = [[loadData objectAtIndex:(i * WiiNumberOfButtons + j)] intValue];
 			}
 		}
-		[keyTable reloadData];
+		[self.keyTable reloadData];
 	}
 }
 
@@ -347,16 +337,16 @@ int bindings[maxNumWiimotes][WiiNumberOfButtons] = {
 
 - (IBAction)setIsUsingKBEmu:(id)sender
 {
-	if (sender == KBEnabledButton) {
-		[keyTable selectRowIndexes:nil byExtendingSelection:NO];
+	if (sender == self.KBEnabledButton) {
+		[self.keyTable selectRowIndexes:nil byExtendingSelection:NO];
 		_isSettingPreferences = NO;
-		if ([KBEnabledButton state] == NSOnState) {
-			[self setTable:keyTable isEnabled:YES];
-			[prefHelpText setStringValue:prefHelpString];
+		if ([self.KBEnabledButton state] == NSOnState) {
+			[self setTable:self.keyTable isEnabled:YES];
+			[self.prefHelpText setStringValue:prefHelpString];
 			_isUsingKBEmu = YES;			
 		} else {
-			[self setTable:keyTable isEnabled:NO];
-			[prefHelpText setStringValue:@""];
+			[self setTable:self.keyTable isEnabled:NO];
+			[self.prefHelpText setStringValue:@""];
 			_isUsingKBEmu = NO;
 		}
 	}
@@ -364,8 +354,8 @@ int bindings[maxNumWiimotes][WiiNumberOfButtons] = {
 
 - (IBAction)setIsUsingVirtualHID:(id)sender
 {
-	if (sender == HIDEnabledButton) {
-		if ([HIDEnabledButton state] == NSOnState) {
+	if (sender == self.HIDEnabledButton) {
+		if ([self.HIDEnabledButton state] == NSOnState) {
 			int i;
 			for (i=0; i < maxNumWiimotes; i++) {
 				if (_wiimote[i] != NULL)
@@ -399,7 +389,7 @@ int bindings[maxNumWiimotes][WiiNumberOfButtons] = {
 
 - (id)tableView:(NSTableView *)aTableView objectValueForTableColumn:(NSTableColumn *)aTableColumn row:(int)rowIndex
 {
-	if (aTableView == keyTable) {
+	if (aTableView == self.keyTable) {
 		int colIndex = [[aTableColumn identifier]intValue];
 		if (colIndex == 0) {
 			return [NSString stringWithCString:keyStrings[rowIndex] encoding:NSUTF8StringEncoding];
@@ -423,7 +413,7 @@ int bindings[maxNumWiimotes][WiiNumberOfButtons] = {
 
 - (int)numberOfRowsInTableView:(NSTableView *)aTableView
 {
-	if (aTableView == keyTable) {
+	if (aTableView == self.keyTable) {
 		return numEmulatedKeys;
 	}
 		
@@ -432,8 +422,8 @@ int bindings[maxNumWiimotes][WiiNumberOfButtons] = {
 
 - (BOOL)tableView:(NSTableView *)aTableView shouldSelectRow:(int)rowIndex
 {
-	if (aTableView == keyTable) {
-		if ([KBEnabledButton state] == NSOnState)
+	if (aTableView == self.keyTable) {
+		if ([self.KBEnabledButton state] == NSOnState)
 			return YES;
 		else
 			return NO;
@@ -443,18 +433,18 @@ int bindings[maxNumWiimotes][WiiNumberOfButtons] = {
 
 - (void)tableViewSelectionDidChange:(NSNotification *)aNotification
 {
-	if ([aNotification object] == keyTable) {
-		int selectedRow = [keyTable selectedRow];
+	if ([aNotification object] == self.keyTable) {
+		int selectedRow = [self.keyTable selectedRow];
 		if (selectedRow >= 0 && selectedRow <= numEmulatedKeys ) {
 			_isSettingPreferences = YES;
 			NSString* string = [NSString stringWithFormat: @"Press desired button for %s on desired Wii remote now.", keyStrings[selectedRow], nil];
-			[prefHelpText setStringValue:string];
-			[prefHelpText setTextColor:[NSColor redColor]];
+			[self.prefHelpText setStringValue:string];
+			[self.prefHelpText setTextColor:[NSColor redColor]];
 		}
 		else {
 			_isSettingPreferences = NO;
-			[prefHelpText setStringValue:prefHelpString];
-			[prefHelpText setTextColor:[NSColor controlTextColor]];
+			[self.prefHelpText setStringValue:prefHelpString];
+			[self.prefHelpText setTextColor:[NSColor controlTextColor]];
 		}
 	}
 }
@@ -464,11 +454,11 @@ int bindings[maxNumWiimotes][WiiNumberOfButtons] = {
 {
 	NSWindow* window;
 	if ([sender tag] == 100)
-		window = prefWindow;
+		window = self.prefWindow;
 	else if ([sender tag] == 101)
-		window = aboutWindow;
+		window = self.aboutWindow;
 	else if ([sender tag] == 103)
-		window = helpWindow;		
+		window = self.helpWindow;
 	else if ([sender tag] == 105) {
 		[NSApp terminate:sender];
 		return;
@@ -498,7 +488,7 @@ int bindings[maxNumWiimotes][WiiNumberOfButtons] = {
 
 - (void) setAutoUpdate:(int)state
 {
-	[UpdateCheckEnabledButton setState:state];
+	[self.UpdateCheckEnabledButton setState:state];
 	NSUserDefaults* defs = [NSUserDefaults standardUserDefaults];
 	[defs setValue:[NSNumber numberWithInt:state] forKey:@"UpdateCheckEnabled"];
 	[defs synchronize];
@@ -517,7 +507,7 @@ int bindings[maxNumWiimotes][WiiNumberOfButtons] = {
 	static CGEventRef event = NULL;
 
 	if (_isSettingPreferences) {
-		int selectedRow = [keyTable selectedRow];
+		int selectedRow = [self.keyTable selectedRow];
 		if (selectedRow >= 0 && selectedRow < numEmulatedKeys) {
 			int key_code = keyCodes[selectedRow];
 			int i,j;
@@ -529,11 +519,11 @@ int bindings[maxNumWiimotes][WiiNumberOfButtons] = {
 				}
 			}
 			bindings[cID][type] = key_code;  // set the number in the bindings array
-			[prefHelpText setStringValue:prefHelpString];
-			[keyTable selectRowIndexes:nil byExtendingSelection:NO];
-			[prefHelpText setStringValue:prefHelpString];
-			[prefHelpText setTextColor:[NSColor controlTextColor]];
-			[keyTable reloadData]; // set the button string in the view
+			[self.prefHelpText setStringValue:prefHelpString];
+			[self.keyTable selectRowIndexes:nil byExtendingSelection:NO];
+			[self.prefHelpText setStringValue:prefHelpString];
+			[self.prefHelpText setTextColor:[NSColor controlTextColor]];
+			[self.keyTable reloadData]; // set the button string in the view
 			[self saveKeyBindings];
 			_isSettingPreferences = NO;
 		}
@@ -596,9 +586,8 @@ int bindings[maxNumWiimotes][WiiNumberOfButtons] = {
 // NOTE: if cID is out of range, we will crash.
 - (void) wiiRemoteDisconnected:(IOBluetoothDevice*)device remote:(WiiRemote*)remote controllerID:(int)cID
 {
-	[_wiimote[cID] autorelease];		// should this full release? (but it called this function... and is busy)
-	_wiimote[cID] = nil;	
-	NSMenuItem* item = [mainMenu itemWithTag:cID+500];
+	_wiimote[cID] = nil;
+	NSMenuItem* item = [self.mainMenu itemWithTag:cID+500];
 	if (item) {
 		[item setEnabled:NO];
 		[item setState:NSOffState];
@@ -653,7 +642,7 @@ int bindings[maxNumWiimotes][WiiNumberOfButtons] = {
 
 - (void) willStartDiscovery
 {
-	[scanMenuTextItem setTitle:@"SCANNING... Click to stop"];
+	[self.scanMenuTextItem setTitle:@"SCANNING... Click to stop"];
 	if (animationTimer) {
 		[animationTimer invalidate];
 	}
@@ -662,7 +651,7 @@ int bindings[maxNumWiimotes][WiiNumberOfButtons] = {
 
 - (void) willStopDiscovery
 {
-	[scanMenuTextItem setTitle:@"Rescan for Wiimotes"];
+	[self.scanMenuTextItem setTitle:@"Rescan for Wiimotes"];
 	if (animationTimer)  {
 		[animationTimer invalidate];
 		animationTimer = nil;
@@ -714,11 +703,9 @@ int bindings[maxNumWiimotes][WiiNumberOfButtons] = {
 	}
 	if (i == maxNumWiimotes) {
 		[wiimote closeConnection];
-		[wiimote autorelease];
 		return;
 	}
 
-	[wiimote retain];
 	[wiimote setDelegate:self];
 	_wiimote[the_id] = wiimote;
 	[wiimote setLEDEnabled:the_id];
@@ -727,7 +714,7 @@ int bindings[maxNumWiimotes][WiiNumberOfButtons] = {
 	// TODO: 10.4 doesnt support hidden on menuitems.  we should delete and add them to the menu instead, but that requires extra code
 	//[[mainMenu itemWithTag:99] setHidden:NO];
 	//[[mainMenu itemWithTag:the_id] setHidden:NO];
-	NSMenuItem* item = [mainMenu itemWithTag:i+500];
+	NSMenuItem* item = [self.mainMenu itemWithTag:i+500];
 	if (item) {
 		[item setEnabled:YES];
 		[item setState:NSOnState];
@@ -737,7 +724,7 @@ int bindings[maxNumWiimotes][WiiNumberOfButtons] = {
 	//[mainMenu itemChanged:[mainMenu itemWithTag:the_id]];
 	//[mainMenu update];
 	 
-	if ([HIDEnabledButton state])
+	if ([self.HIDEnabledButton state])
 		[self syncVirtualDrivers];
 	
 	[wii_menu setImage:icons[2]];

@@ -23,23 +23,24 @@
 	NSStatusItem *wii_menu;
 	NSTimer*	animationTimer;
 	
-	IBOutlet NSMenu* mainMenu;
-	IBOutlet NSMenuItem* scanMenuTextItem;
-	IBOutlet NSWindow* prefWindow;
-	IBOutlet NSWindow* aboutWindow;
-	IBOutlet NSWindow* helpWindow;
-	IBOutlet NSTableView* keyTable;
-	IBOutlet NSButton* HIDEnabledButton;
-	IBOutlet NSButton* KBEnabledButton;
-	IBOutlet NSButton* UpdateCheckEnabledButton;
-	IBOutlet NSTextField* prefHelpText;
-	
 	NSImage* icons[4];
 	
 	BOOL _isSettingPreferences; // cpu saving bool so we dont have to do extra objective-c messaging when we recieve wiimote events
 	BOOL _isUsingKBEmu;			 //  ^-- it turns out that we probably didn't need to go to this length...
 	BOOL _isVirtualHIDOpen;
 }
+
+@property (nonatomic, strong) IBOutlet NSMenu *mainMenu;
+@property (nonatomic, strong) IBOutlet NSMenuItem* scanMenuTextItem;
+@property (nonatomic, strong) IBOutlet NSWindow* prefWindow;
+@property (nonatomic, strong) IBOutlet NSWindow* aboutWindow;
+@property (nonatomic, strong) IBOutlet NSWindow* helpWindow;
+@property (nonatomic, strong) IBOutlet NSTableView* keyTable;
+@property (nonatomic, strong) IBOutlet NSButton* HIDEnabledButton;
+@property (nonatomic, strong) IBOutlet NSButton* KBEnabledButton;
+@property (nonatomic, strong) IBOutlet NSButton* UpdateCheckEnabledButton;
+@property (nonatomic, strong) IBOutlet NSTextField* prefHelpText;
+
 - (id) init;
 - (void) dealloc;
 - (void) awakeFromNib;
