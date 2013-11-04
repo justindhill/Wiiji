@@ -1,0 +1,421 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 42;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B24CE9B10DBB264D007C34A8 /* image.png in Resources */ = {isa = PBXBuildFile; fileRef = B24CE9B00DBB264D007C34A8 /* image.png */; };
+		B250A18C0DC855120010C7B2 /* ChangeLog.txt in Resources */ = {isa = PBXBuildFile; fileRef = B250A18B0DC855120010C7B2 /* ChangeLog.txt */; };
+		B2707EBE0DB31C1800FC34FC /* WiiRemote.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = B2ED29370DA210550005EC9A /* WiiRemote.framework */; };
+		B2707EC10DB31C2200FC34FC /* WiiRemote.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2ED29370DA210550005EC9A /* WiiRemote.framework */; };
+		B2707EC20DB31C2200FC34FC /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B24A54C00DA7A2D7002DEAC4 /* IOKit.framework */; };
+		B2707EC40DB31C2800FC34FC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; };
+		B2707EC50DB31C2800FC34FC /* wiimote_manager.m in Sources */ = {isa = PBXBuildFile; fileRef = B226F1A50D9A8540001374F1 /* wiimote_manager.m */; };
+		B2707EC60DB31C3E00FC34FC /* com.veltrop.taylor.Wiiji.defaults.plist in Resources */ = {isa = PBXBuildFile; fileRef = B22FA0AB0DAC9AF00039AB3D /* com.veltrop.taylor.Wiiji.defaults.plist */; };
+		B2707EC70DB31C3E00FC34FC /* MainMenu.nib in Resources */ = {isa = PBXBuildFile; fileRef = 29B97318FDCFA39411CA2CEA /* MainMenu.nib */; };
+		B2707EC80DB31C3E00FC34FC /* wiijoy_icon_12.png in Resources */ = {isa = PBXBuildFile; fileRef = B26B65F80DA90E3700BD58B4 /* wiijoy_icon_12.png */; };
+		B2707EC90DB31C3E00FC34FC /* help-scanning.png in Resources */ = {isa = PBXBuildFile; fileRef = B26B66160DA91D8A00BD58B4 /* help-scanning.png */; };
+		B2707ECA0DB31C3E00FC34FC /* help-rescan.png in Resources */ = {isa = PBXBuildFile; fileRef = B26B66170DA91D8A00BD58B4 /* help-rescan.png */; };
+		B2707ECB0DB31C3E00FC34FC /* help-found.png in Resources */ = {isa = PBXBuildFile; fileRef = B26B661A0DA91FAB00BD58B4 /* help-found.png */; };
+		B2707ECC0DB31C3E00FC34FC /* wiijoy_icon_0.png in Resources */ = {isa = PBXBuildFile; fileRef = B2E109770DA9FDA9003E963D /* wiijoy_icon_0.png */; };
+		B2707ECD0DB31C3E00FC34FC /* wiijoy_icon_1.png in Resources */ = {isa = PBXBuildFile; fileRef = B2E109780DA9FDA9003E963D /* wiijoy_icon_1.png */; };
+		B2707ECE0DB31C3E00FC34FC /* wiijoy_icon_2.png in Resources */ = {isa = PBXBuildFile; fileRef = B2E109790DA9FDA9003E963D /* wiijoy_icon_2.png */; };
+		B2707ECF0DB31C3E00FC34FC /* appicon.icns in Resources */ = {isa = PBXBuildFile; fileRef = B24C5B9B0DAB16AF00E65D6A /* appicon.icns */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B22FA0890DAC97CC0039AB3D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B22FA0810DAC97CC0039AB3D /* WiiRemoteFramework.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 8DC2EF5B0486A6940098B216;
+			remoteInfo = WiiRemoteFramework;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		B2707ED70DB31C5300FC34FC /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				B2707EBE0DB31C1800FC34FC /* WiiRemote.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B2707ED80DB31C5300FC34FC /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
+		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		29B97319FDCFA39411CA2CEA /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = English.lproj/MainMenu.nib; sourceTree = "<group>"; };
+		32CA4F630368D1EE00C91783 /* wiipad_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = wiipad_Prefix.pch; sourceTree = "<group>"; };
+		B226F1A40D9A8540001374F1 /* wiimote_manager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = wiimote_manager.h; sourceTree = "<group>"; };
+		B226F1A50D9A8540001374F1 /* wiimote_manager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = wiimote_manager.m; sourceTree = "<group>"; };
+		B22FA0810DAC97CC0039AB3D /* WiiRemoteFramework.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = WiiRemoteFramework.xcodeproj; path = WiiRemoteFramework/WiiRemoteFramework.xcodeproj; sourceTree = "<group>"; };
+		B22FA0AB0DAC9AF00039AB3D /* com.veltrop.taylor.Wiiji.defaults.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = com.veltrop.taylor.Wiiji.defaults.plist; sourceTree = "<group>"; };
+		B23A19DA0DB77E5400E28F9C /* wiimote_types.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = wiimote_types.h; sourceTree = "<group>"; };
+		B24A54C00DA7A2D7002DEAC4 /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = /System/Library/Frameworks/IOKit.framework; sourceTree = "<absolute>"; };
+		B24C5B9B0DAB16AF00E65D6A /* appicon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = appicon.icns; path = Art/appicon.icns; sourceTree = "<group>"; };
+		B24CE9B00DBB264D007C34A8 /* image.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = image.png; path = dst/dstResources/image.png; sourceTree = "<group>"; };
+		B250A18B0DC855120010C7B2 /* ChangeLog.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ChangeLog.txt; sourceTree = "<group>"; };
+		B26B65F80DA90E3700BD58B4 /* wiijoy_icon_12.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = wiijoy_icon_12.png; path = Art/wiijoy_icon_12.png; sourceTree = "<group>"; };
+		B26B66160DA91D8A00BD58B4 /* help-scanning.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "help-scanning.png"; path = "Art/help-scanning.png"; sourceTree = "<group>"; };
+		B26B66170DA91D8A00BD58B4 /* help-rescan.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "help-rescan.png"; path = "Art/help-rescan.png"; sourceTree = "<group>"; };
+		B26B661A0DA91FAB00BD58B4 /* help-found.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "help-found.png"; path = "Art/help-found.png"; sourceTree = "<group>"; };
+		B28B4D670DB2560D005F5A8D /* Wiiji.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Wiiji.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B28B4D690DB2560D005F5A8D /* Wiiji-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Wiiji-Info.plist"; sourceTree = "<group>"; };
+		B2E109770DA9FDA9003E963D /* wiijoy_icon_0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = wiijoy_icon_0.png; path = Art/wiijoy_icon_0.png; sourceTree = "<group>"; };
+		B2E109780DA9FDA9003E963D /* wiijoy_icon_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = wiijoy_icon_1.png; path = Art/wiijoy_icon_1.png; sourceTree = "<group>"; };
+		B2E109790DA9FDA9003E963D /* wiijoy_icon_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = wiijoy_icon_2.png; path = Art/wiijoy_icon_2.png; sourceTree = "<group>"; };
+		B2ED29370DA210550005EC9A /* WiiRemote.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WiiRemote.framework; path = WiiRemoteFramework/build/Release/WiiRemote.framework; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B28B4D650DB2560D005F5A8D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B2707EC10DB31C2200FC34FC /* WiiRemote.framework in Frameworks */,
+				B2707EC20DB31C2200FC34FC /* IOKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		080E96DDFE201D6D7F000001 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				B23A19DA0DB77E5400E28F9C /* wiimote_types.h */,
+				B226F1A40D9A8540001374F1 /* wiimote_manager.h */,
+				B226F1A50D9A8540001374F1 /* wiimote_manager.m */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		19C28FACFE9D520D11CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B28B4D670DB2560D005F5A8D /* Wiiji.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		29B97314FDCFA39411CA2CEA /* wiipad */ = {
+			isa = PBXGroup;
+			children = (
+				B250A18B0DC855120010C7B2 /* ChangeLog.txt */,
+				B2707F110DB3219C00FC34FC /* Depends */,
+				080E96DDFE201D6D7F000001 /* Classes */,
+				29B97315FDCFA39411CA2CEA /* Other Sources */,
+				29B97317FDCFA39411CA2CEA /* Resources */,
+				29B97323FDCFA39411CA2CEA /* Frameworks */,
+				19C28FACFE9D520D11CA2CBB /* Products */,
+			);
+			name = wiipad;
+			sourceTree = "<group>";
+		};
+		29B97315FDCFA39411CA2CEA /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				32CA4F630368D1EE00C91783 /* wiipad_Prefix.pch */,
+				29B97316FDCFA39411CA2CEA /* main.m */,
+			);
+			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+		29B97317FDCFA39411CA2CEA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				B24CE9D70DBB2947007C34A8 /* Images */,
+				B24C5B9B0DAB16AF00E65D6A /* appicon.icns */,
+				B28B4D690DB2560D005F5A8D /* Wiiji-Info.plist */,
+				B22FA0AB0DAC9AF00039AB3D /* com.veltrop.taylor.Wiiji.defaults.plist */,
+				29B97318FDCFA39411CA2CEA /* MainMenu.nib */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B24A54C00DA7A2D7002DEAC4 /* IOKit.framework */,
+				B2ED29370DA210550005EC9A /* WiiRemote.framework */,
+				1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B22FA0820DAC97CC0039AB3D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B22FA08A0DAC97CC0039AB3D /* WiiRemote.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B24CE9D70DBB2947007C34A8 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				B24CE9B00DBB264D007C34A8 /* image.png */,
+				B26B661A0DA91FAB00BD58B4 /* help-found.png */,
+				B26B66160DA91D8A00BD58B4 /* help-scanning.png */,
+				B26B66170DA91D8A00BD58B4 /* help-rescan.png */,
+				B26B65F80DA90E3700BD58B4 /* wiijoy_icon_12.png */,
+				B2E109770DA9FDA9003E963D /* wiijoy_icon_0.png */,
+				B2E109780DA9FDA9003E963D /* wiijoy_icon_1.png */,
+				B2E109790DA9FDA9003E963D /* wiijoy_icon_2.png */,
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
+		B2707F110DB3219C00FC34FC /* Depends */ = {
+			isa = PBXGroup;
+			children = (
+				B22FA0810DAC97CC0039AB3D /* WiiRemoteFramework.xcodeproj */,
+			);
+			name = Depends;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B28B4D660DB2560D005F5A8D /* Wiiji */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B28B4D710DB2560E005F5A8D /* Build configuration list for PBXNativeTarget "Wiiji" */;
+			buildPhases = (
+				B28B4D630DB2560D005F5A8D /* Resources */,
+				B28B4D640DB2560D005F5A8D /* Sources */,
+				B28B4D650DB2560D005F5A8D /* Frameworks */,
+				B2707ED70DB31C5300FC34FC /* CopyFiles */,
+				B2707ED80DB31C5300FC34FC /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Wiiji;
+			productName = Wiiji;
+			productReference = B28B4D670DB2560D005F5A8D /* Wiiji.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		29B97313FDCFA39411CA2CEA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+			};
+			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "wiipad" */;
+			compatibilityVersion = "Xcode 2.4";
+			developmentRegion = English;
+			hasScannedForEncodings = 1;
+			knownRegions = (
+				English,
+				Japanese,
+				French,
+				German,
+			);
+			mainGroup = 29B97314FDCFA39411CA2CEA /* wiipad */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = B22FA0820DAC97CC0039AB3D /* Products */;
+					ProjectRef = B22FA0810DAC97CC0039AB3D /* WiiRemoteFramework.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				B28B4D660DB2560D005F5A8D /* Wiiji */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		B22FA08A0DAC97CC0039AB3D /* WiiRemote.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = WiiRemote.framework;
+			remoteRef = B22FA0890DAC97CC0039AB3D /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B28B4D630DB2560D005F5A8D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B2707EC60DB31C3E00FC34FC /* com.veltrop.taylor.Wiiji.defaults.plist in Resources */,
+				B2707EC70DB31C3E00FC34FC /* MainMenu.nib in Resources */,
+				B2707EC80DB31C3E00FC34FC /* wiijoy_icon_12.png in Resources */,
+				B2707EC90DB31C3E00FC34FC /* help-scanning.png in Resources */,
+				B2707ECA0DB31C3E00FC34FC /* help-rescan.png in Resources */,
+				B2707ECB0DB31C3E00FC34FC /* help-found.png in Resources */,
+				B2707ECC0DB31C3E00FC34FC /* wiijoy_icon_0.png in Resources */,
+				B2707ECD0DB31C3E00FC34FC /* wiijoy_icon_1.png in Resources */,
+				B2707ECE0DB31C3E00FC34FC /* wiijoy_icon_2.png in Resources */,
+				B2707ECF0DB31C3E00FC34FC /* appicon.icns in Resources */,
+				B24CE9B10DBB264D007C34A8 /* image.png in Resources */,
+				B250A18C0DC855120010C7B2 /* ChangeLog.txt in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B28B4D640DB2560D005F5A8D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B2707EC40DB31C2800FC34FC /* main.m in Sources */,
+				B2707EC50DB31C2800FC34FC /* wiimote_manager.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		29B97318FDCFA39411CA2CEA /* MainMenu.nib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				29B97319FDCFA39411CA2CEA /* English */,
+			);
+			name = MainMenu.nib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		B28B4D6A0DB2560E005F5A8D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_1)",
+					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_2)",
+				);
+				FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_1 = "\"$(SRCROOT)/WiiRemoteFramework/build/Release\"";
+				FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_2 = "\"$(SRCROOT)\"";
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/AppKit.framework/Headers/AppKit.h";
+				INFOPLIST_FILE = "Wiiji-Info.plist";
+				INSTALL_PATH = "$(HOME)/Applications";
+				OTHER_LDFLAGS = (
+					"-framework",
+					Foundation,
+					"-framework",
+					AppKit,
+				);
+				PREBINDING = NO;
+				PRODUCT_NAME = Wiiji;
+				SDKROOT = macosx;
+				WRAPPER_EXTENSION = app;
+				ZERO_LINK = YES;
+			};
+			name = Debug;
+		};
+		B28B4D6B0DB2560E005F5A8D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_1)",
+					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_2)",
+				);
+				FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_1 = "\"$(SRCROOT)/WiiRemoteFramework/build/Release\"";
+				FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_2 = "\"$(SRCROOT)\"";
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/AppKit.framework/Headers/AppKit.h";
+				INFOPLIST_FILE = "Wiiji-Info.plist";
+				INSTALL_PATH = "$(HOME)/Applications";
+				OTHER_LDFLAGS = (
+					"-framework",
+					Foundation,
+					"-framework",
+					AppKit,
+				);
+				PREBINDING = NO;
+				PRODUCT_NAME = Wiiji;
+				SDKROOT = macosx;
+				WRAPPER_EXTENSION = app;
+				ZERO_LINK = NO;
+			};
+			name = Release;
+		};
+		C01FCF4F08A954540054247B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.4;
+				PREBINDING = NO;
+				SDKROOT = "$(DEVELOPER_SDK_DIR)/MacOSX10.6.sdk";
+			};
+			name = Debug;
+		};
+		C01FCF5008A954540054247B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					ppc,
+					i386,
+				);
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.4;
+				PREBINDING = NO;
+				SDKROOT = "$(DEVELOPER_SDK_DIR)/MacOSX10.6.sdk";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B28B4D710DB2560E005F5A8D /* Build configuration list for PBXNativeTarget "Wiiji" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B28B4D6A0DB2560E005F5A8D /* Debug */,
+				B28B4D6B0DB2560E005F5A8D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C01FCF4E08A954540054247B /* Build configuration list for PBXProject "wiipad" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C01FCF4F08A954540054247B /* Debug */,
+				C01FCF5008A954540054247B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 29B97313FDCFA39411CA2CEA /* Project object */;
+}

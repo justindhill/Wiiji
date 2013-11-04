@@ -1,0 +1,5 @@
+2008-05-02: Version 1.2 Release
+Update support added.
+
+2008-04-28: 
+Fixed a bug where setting a keyboard mapping in the prefs window would jam the software into "pref setting mode" preventing the wiimote input from going into the system.

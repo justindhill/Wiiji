@@ -1,0 +1,781 @@
+// !$*UTF8*$!
+{
+	29B97313FDCFA39411CA2CEA /* Project object */ = {
+		activeArchitecture = i386;
+		activeBuildConfigurationName = Release;
+		activeExecutable = B28B4D680DB2560D005F5A8D /* Wiiji */;
+		activeTarget = B28B4D660DB2560D005F5A8D /* Wiiji */;
+		addToTargets = (
+			B28B4D660DB2560D005F5A8D /* Wiiji */,
+		);
+		breakpoints = (
+			B24A5B4F0DA7D32C002DEAC4 /* wiimote_manager.m:789 */,
+			B24A5B6D0DA7D67C002DEAC4 /* wiimote_manager.m:776 */,
+			B2E108A50DA9C4F0003E963D /* wiimote_manager.m:405 */,
+			B221AD940DAA52AA00FA657E /* wiimote_manager.m:550 */,
+			B2B1B9140DB3B7020033257C /* wiimote_manager.m:525 */,
+			B25C6AF10DB9D16600A9E3E3 /* wiimote_manager.m:171 */,
+			B25C6AF30DB9D17000A9E3E3 /* wiimote_manager.m:112 */,
+			B25C6AF70DB9D21D00A9E3E3 /* wiimote_manager.m:190 */,
+			B25C6B000DB9D41C00A9E3E3 /* wiimote_manager.m:189 */,
+			B25C6B020DB9D42600A9E3E3 /* wiimote_manager.m:210 */,
+			B25C6B050DB9D49E00A9E3E3 /* wiimote_manager.m:192 */,
+			B25C6B070DB9D4A400A9E3E3 /* wiimote_manager.m:193 */,
+			B25C6B090DB9D4A500A9E3E3 /* wiimote_manager.m:194 */,
+			B25C6B0B0DB9D4A600A9E3E3 /* wiimote_manager.m:195 */,
+			B25C6B150DB9D54300A9E3E3 /* wiimote_manager.m:182 */,
+			B20D23E90DBCF02800577596 /* wiimote_manager.m:664 */,
+			B2397D780DBD80E600CC20CF /* wiimote_manager.m:142 */,
+			B259A18F0DBD8189003ECE51 /* wiimote_manager.m:153 */,
+			B259A1A10DBD819E003ECE51 /* wiimote_manager.m:152 */,
+			B259A1B10DBD82A9003ECE51 /* wiimote_manager.m:155 */,
+			B259A1D70DBD861E003ECE51 /* wiimote_manager.m:327 */,
+			B259A1D90DBD861F003ECE51 /* wiimote_manager.m:331 */,
+			B259A1DD0DBD8632003ECE51 /* wiimote_manager.m:317 */,
+			B259A1DF0DBD8633003ECE51 /* wiimote_manager.m:318 */,
+			B259A1E10DBD8633003ECE51 /* wiimote_manager.m:319 */,
+			B259A1EE0DBD86CC003ECE51 /* wiimote_manager.m:328 */,
+			B259A2070DBD88DD003ECE51 /* wiimote_manager.m:325 */,
+			B2EB4C5C0DBF0871003C55C8 /* wiimote_manager.m:586 */,
+			B2A9A1B20DC029B4004AA694 /* wiimote_manager.m:678 */,
+			B2A9A1B40DC029B9004AA694 /* wiimote_manager.m:672 */,
+		);
+		codeSenseManager = B226F1A00D9A84C8001374F1 /* Code sense */;
+		executables = (
+			B28B4D680DB2560D005F5A8D /* Wiiji */,
+		);
+		perUserDictionary = {
+			"PBXConfiguration.PBXBreakpointsDataSource.v1:1CA1AED706398EBD00589147" = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXBreakpointsDataSource_BreakpointID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					20,
+					20,
+					198,
+					20,
+					99,
+					99,
+					29,
+					20,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXBreakpointsDataSource_ActionID,
+					PBXBreakpointsDataSource_TypeID,
+					PBXBreakpointsDataSource_BreakpointID,
+					PBXBreakpointsDataSource_UseID,
+					PBXBreakpointsDataSource_LocationID,
+					PBXBreakpointsDataSource_ConditionID,
+					PBXBreakpointsDataSource_IgnoreCountID,
+					PBXBreakpointsDataSource_ContinueID,
+				);
+			};
+			PBXConfiguration.PBXFileTableDataSource3.PBXFileTableDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXFileDataSource_Filename_ColumnID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					20,
+					193,
+					20,
+					48,
+					43,
+					43,
+					20,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXFileDataSource_FiletypeID,
+					PBXFileDataSource_Filename_ColumnID,
+					PBXFileDataSource_Built_ColumnID,
+					PBXFileDataSource_ObjectSize_ColumnID,
+					PBXFileDataSource_Errors_ColumnID,
+					PBXFileDataSource_Warnings_ColumnID,
+					PBXFileDataSource_Target_ColumnID,
+				);
+			};
+			PBXConfiguration.PBXFileTableDataSource3.PBXSymbolsDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXSymbolsDataSource_SymbolNameID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					16,
+					200,
+					50,
+					183,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXSymbolsDataSource_SymbolTypeIconID,
+					PBXSymbolsDataSource_SymbolNameID,
+					PBXSymbolsDataSource_SymbolTypeID,
+					PBXSymbolsDataSource_ReferenceNameID,
+				);
+			};
+			PBXConfiguration.PBXTargetDataSource.PBXTargetDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXFileDataSource_Filename_ColumnID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					20,
+					200,
+					63,
+					20,
+					48.1626,
+					43,
+					43,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXFileDataSource_FiletypeID,
+					PBXFileDataSource_Filename_ColumnID,
+					PBXTargetDataSource_PrimaryAttribute,
+					PBXFileDataSource_Built_ColumnID,
+					PBXFileDataSource_ObjectSize_ColumnID,
+					PBXFileDataSource_Errors_ColumnID,
+					PBXFileDataSource_Warnings_ColumnID,
+				);
+			};
+			PBXPerProjectTemplateStateSaveDate = 233060431;
+			PBXWorkspaceStateSaveDate = 233060431;
+		};
+		sourceControlManager = B226F19F0D9A84C8001374F1 /* Source Control */;
+		userBuildSettings = {
+		};
+	};
+	29B97316FDCFA39411CA2CEA /* main.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {781, 664}}";
+			sepNavSelRange = "{57, 0}";
+			sepNavVisRange = "{0, 251}";
+			sepNavWindowFrame = "{{295, 35}, {840, 736}}";
+		};
+	};
+	B20D23E90DBCF02800577596 /* wiimote_manager.m:664 */ = {
+		isa = PBXFileBreakpoint;
+		actions = (
+		);
+		breakpointStyle = 0;
+		continueAfterActions = 0;
+		countType = 0;
+		delayBeforeContinue = 0;
+		fileReference = B226F1A50D9A8540001374F1 /* wiimote_manager.m */;
+		functionName = "-willStopDiscovery";
+		hitCount = 0;
+		ignoreCount = 0;
+		lineNumber = 664;
+		location = Wiiji;
+		modificationTime = 231383520.37094;
+		state = 2;
+	};
+	B221AD940DAA52AA00FA657E /* wiimote_manager.m:550 */ = {
+		isa = PBXFileBreakpoint;
+		actions = (
+		);
+		breakpointStyle = 0;
+		continueAfterActions = 0;
+		countType = 0;
+		delayBeforeContinue = 0;
+		fileReference = B226F1A50D9A8540001374F1 /* wiimote_manager.m */;
+		functionName = "-buttonChanged:isPressed:controllerID:";
+		hitCount = 0;
+		ignoreCount = 0;
+		lineNumber = 550;
+		location = Wiijoy;
+		modificationTime = 231383520.368821;
+		state = 2;
+	};
+	B226F19F0D9A84C8001374F1 /* Source Control */ = {
+		isa = PBXSourceControlManager;
+		fallbackIsa = XCSourceControlManager;
+		isSCMEnabled = 0;
+		scmConfiguration = {
+		};
+	};
+	B226F1A00D9A84C8001374F1 /* Code sense */ = {
+		isa = PBXCodeSenseManager;
+		indexTemplatePath = "";
+	};
+	B226F1A40D9A8540001374F1 /* wiimote_manager.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1003, 1358}}";
+			sepNavSelRange = "{950, 8}";
+			sepNavVisRange = "{0, 1525}";
+			sepNavVisRect = "{{0, 0}, {794, 641}}";
+			sepNavWindowFrame = "{{158, 0}, {1062, 778}}";
+		};
+	};
+	B226F1A50D9A8540001374F1 /* wiimote_manager.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {2000, 11284}}";
+			sepNavSelRange = "{16733, 0}";
+			sepNavVisRange = "{18041, 1281}";
+			sepNavVisRect = "{{0, 4733}, {794, 641}}";
+			sepNavWindowFrame = "{{210, 0}, {1062, 778}}";
+		};
+	};
+	B22FA0AB0DAC9AF00039AB3D /* com.veltrop.taylor.Wiiji.defaults.plist */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {774, 674}}";
+			sepNavSelRange = "{171, 74}";
+			sepNavVisRange = "{0, 263}";
+			sepNavWindowFrame = "{{19, 245}, {833, 778}}";
+		};
+	};
+	B2397D780DBD80E600CC20CF /* wiimote_manager.m:142 */ = {
+		isa = PBXFileBreakpoint;
+		actions = (
+		);
+		breakpointStyle = 0;
+		continueAfterActions = 0;
+		countType = 0;
+		delayBeforeContinue = 0;
+		fileReference = B226F1A50D9A8540001374F1 /* wiimote_manager.m */;
+		functionName = "-cleanUp";
+		hitCount = 0;
+		ignoreCount = 0;
+		lineNumber = 142;
+		location = Wiiji;
+		modificationTime = 231383520.371111;
+		state = 2;
+	};
+	B23A19DA0DB77E5400E28F9C /* wiimote_types.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {676, 871}}";
+			sepNavSelRange = "{136, 0}";
+			sepNavVisRange = "{0, 1193}";
+			sepNavWindowFrame = "{{694, 85}, {735, 943}}";
+		};
+	};
+	B24A5B4F0DA7D32C002DEAC4 /* wiimote_manager.m:789 */ = {
+		isa = PBXFileBreakpoint;
+		actions = (
+		);
+		breakpointStyle = 0;
+		continueAfterActions = 0;
+		countType = 0;
+		delayBeforeContinue = 0;
+		fileReference = B226F1A50D9A8540001374F1 /* wiimote_manager.m */;
+		functionName = "-closeVirtualDriver";
+		hitCount = 0;
+		ignoreCount = 0;
+		lineNumber = 789;
+		modificationTime = 231383520.368201;
+		state = 2;
+	};
+	B24A5B6D0DA7D67C002DEAC4 /* wiimote_manager.m:776 */ = {
+		isa = PBXFileBreakpoint;
+		actions = (
+		);
+		breakpointStyle = 0;
+		continueAfterActions = 0;
+		countType = 0;
+		delayBeforeContinue = 0;
+		fileReference = B226F1A50D9A8540001374F1 /* wiimote_manager.m */;
+		functionName = "-openVirtualDriver";
+		hitCount = 0;
+		ignoreCount = 0;
+		lineNumber = 776;
+		location = wiipad;
+		modificationTime = 231383520.3684739;
+		state = 2;
+	};
+	B24C5B9B0DAB16AF00E65D6A /* appicon.icns */ = {
+		uiCtxt = {
+			sepNavWindowFrame = "{{65, 119}, {842, 862}}";
+		};
+	};
+	B250A18B0DC855120010C7B2 /* ChangeLog.txt */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1022, 706}}";
+			sepNavSelRange = "{218, 0}";
+			sepNavVisRange = "{0, 218}";
+			sepNavWindowFrame = "{{116, 0}, {1021, 778}}";
+		};
+	};
+	B259A18F0DBD8189003ECE51 /* wiimote_manager.m:153 */ = {
+		isa = PBXFileBreakpoint;
+		actions = (
+		);
+		breakpointStyle = 0;
+		continueAfterActions = 0;
+		countType = 0;
+		delayBeforeContinue = 0;
+		fileReference = B226F1A50D9A8540001374F1 /* wiimote_manager.m */;
+		functionName = "-cleanUp";
+		hitCount = 0;
+		ignoreCount = 0;
+		lineNumber = 153;
+		location = Wiiji;
+		modificationTime = 231383520.371282;
+		state = 2;
+	};
+	B259A1A10DBD819E003ECE51 /* wiimote_manager.m:152 */ = {
+		isa = PBXFileBreakpoint;
+		actions = (
+		);
+		breakpointStyle = 0;
+		continueAfterActions = 0;
+		countType = 0;
+		delayBeforeContinue = 0;
+		fileReference = B226F1A50D9A8540001374F1 /* wiimote_manager.m */;
+		functionName = "-cleanUp";
+		hitCount = 0;
+		ignoreCount = 0;
+		lineNumber = 152;
+		location = Wiiji;
+		modificationTime = 231383520.371452;
+		state = 2;
+	};
+	B259A1B10DBD82A9003ECE51 /* wiimote_manager.m:155 */ = {
+		isa = PBXFileBreakpoint;
+		actions = (
+		);
+		breakpointStyle = 0;
+		continueAfterActions = 0;
+		countType = 0;
+		delayBeforeContinue = 0;
+		fileReference = B226F1A50D9A8540001374F1 /* wiimote_manager.m */;
+		functionName = "-cleanUp";
+		hitCount = 0;
+		ignoreCount = 0;
+		lineNumber = 155;
+		location = Wiiji;
+		modificationTime = 231383520.371776;
+		state = 2;
+	};
+	B259A1D70DBD861E003ECE51 /* wiimote_manager.m:327 */ = {
+		isa = PBXFileBreakpoint;
+		actions = (
+		);
+		breakpointStyle = 0;
+		continueAfterActions = 0;
+		countType = 0;
+		delayBeforeContinue = 0;
+		fileReference = B226F1A50D9A8540001374F1 /* wiimote_manager.m */;
+		functionName = "-tryAgain:";
+		hitCount = 0;
+		ignoreCount = 0;
+		lineNumber = 327;
+		location = Wiiji;
+		modificationTime = 231383520.371948;
+		state = 1;
+	};
+	B259A1D90DBD861F003ECE51 /* wiimote_manager.m:331 */ = {
+		isa = PBXFileBreakpoint;
+		actions = (
+		);
+		breakpointStyle = 0;
+		continueAfterActions = 0;
+		countType = 0;
+		delayBeforeContinue = 0;
+		fileReference = B226F1A50D9A8540001374F1 /* wiimote_manager.m */;
+		functionName = "-tryAgain:";
+		hitCount = 0;
+		ignoreCount = 0;
+		lineNumber = 331;
+		location = Wiiji;
+		modificationTime = 231383520.37213;
+		state = 1;
+	};
+	B259A1DD0DBD8632003ECE51 /* wiimote_manager.m:317 */ = {
+		isa = PBXFileBreakpoint;
+		actions = (
+		);
+		breakpointStyle = 0;
+		continueAfterActions = 0;
+		countType = 0;
+		delayBeforeContinue = 0;
+		fileReference = B226F1A50D9A8540001374F1 /* wiimote_manager.m */;
+		functionName = "-stopScanDoConnect:";
+		hitCount = 0;
+		ignoreCount = 0;
+		lineNumber = 317;
+		location = Wiiji;
+		modificationTime = 231383520.372302;
+		state = 1;
+	};
+	B259A1DF0DBD8633003ECE51 /* wiimote_manager.m:318 */ = {
+		isa = PBXFileBreakpoint;
+		actions = (
+		);
+		breakpointStyle = 0;
+		continueAfterActions = 0;
+		countType = 0;
+		delayBeforeContinue = 0;
+		fileReference = B226F1A50D9A8540001374F1 /* wiimote_manager.m */;
+		functionName = "-stopScanDoConnect:";
+		hitCount = 0;
+		ignoreCount = 0;
+		lineNumber = 318;
+		location = Wiiji;
+		modificationTime = 231383520.372472;
+		state = 1;
+	};
+	B259A1E10DBD8633003ECE51 /* wiimote_manager.m:319 */ = {
+		isa = PBXFileBreakpoint;
+		actions = (
+		);
+		breakpointStyle = 0;
+		continueAfterActions = 0;
+		countType = 0;
+		delayBeforeContinue = 0;
+		fileReference = B226F1A50D9A8540001374F1 /* wiimote_manager.m */;
+		functionName = "-stopScanDoConnect:";
+		hitCount = 0;
+		ignoreCount = 0;
+		lineNumber = 319;
+		location = Wiiji;
+		modificationTime = 231383520.372642;
+		state = 1;
+	};
+	B259A1EE0DBD86CC003ECE51 /* wiimote_manager.m:328 */ = {
+		isa = PBXFileBreakpoint;
+		actions = (
+		);
+		breakpointStyle = 0;
+		continueAfterActions = 0;
+		countType = 0;
+		delayBeforeContinue = 0;
+		fileReference = B226F1A50D9A8540001374F1 /* wiimote_manager.m */;
+		functionName = "-tryAgain:";
+		hitCount = 0;
+		ignoreCount = 0;
+		lineNumber = 328;
+		location = Wiiji;
+		modificationTime = 231383520.372812;
+		state = 1;
+	};
+	B259A2070DBD88DD003ECE51 /* wiimote_manager.m:325 */ = {
+		isa = PBXFileBreakpoint;
+		actions = (
+		);
+		breakpointStyle = 0;
+		continueAfterActions = 0;
+		countType = 0;
+		delayBeforeContinue = 0;
+		fileReference = B226F1A50D9A8540001374F1 /* wiimote_manager.m */;
+		functionName = "-tryAgain:";
+		hitCount = 0;
+		ignoreCount = 0;
+		lineNumber = 325;
+		location = Wiiji;
+		modificationTime = 231383520.372982;
+		state = 1;
+	};
+	B25C6AF10DB9D16600A9E3E3 /* wiimote_manager.m:171 */ = {
+		isa = PBXFileBreakpoint;
+		actions = (
+		);
+		breakpointStyle = 0;
+		continueAfterActions = 0;
+		countType = 0;
+		delayBeforeContinue = 0;
+		fileReference = B226F1A50D9A8540001374F1 /* wiimote_manager.m */;
+		functionName = "-awakeFromNib";
+		hitCount = 0;
+		ignoreCount = 0;
+		lineNumber = 171;
+		location = Wiiji;
+		modificationTime = 231383520.369164;
+		state = 2;
+	};
+	B25C6AF30DB9D17000A9E3E3 /* wiimote_manager.m:112 */ = {
+		isa = PBXFileBreakpoint;
+		actions = (
+		);
+		breakpointStyle = 0;
+		continueAfterActions = 0;
+		countType = 0;
+		delayBeforeContinue = 0;
+		fileReference = B226F1A50D9A8540001374F1 /* wiimote_manager.m */;
+		functionName = "-init";
+		hitCount = 0;
+		ignoreCount = 0;
+		lineNumber = 112;
+		location = Wiiji;
+		modificationTime = 231383520.369369;
+		state = 2;
+	};
+	B25C6AF70DB9D21D00A9E3E3 /* wiimote_manager.m:190 */ = {
+		isa = PBXFileBreakpoint;
+		actions = (
+		);
+		breakpointStyle = 0;
+		continueAfterActions = 0;
+		countType = 0;
+		delayBeforeContinue = 0;
+		fileReference = B226F1A50D9A8540001374F1 /* wiimote_manager.m */;
+		functionName = "-awakeFromNib";
+		hitCount = 0;
+		ignoreCount = 0;
+		lineNumber = 190;
+		location = Wiiji;
+		modificationTime = 231383520.36954;
+		state = 2;
+	};
+	B25C6B000DB9D41C00A9E3E3 /* wiimote_manager.m:189 */ = {
+		isa = PBXFileBreakpoint;
+		actions = (
+		);
+		breakpointStyle = 0;
+		continueAfterActions = 0;
+		countType = 0;
+		delayBeforeContinue = 0;
+		fileReference = B226F1A50D9A8540001374F1 /* wiimote_manager.m */;
+		functionName = "-awakeFromNib";
+		hitCount = 0;
+		ignoreCount = 0;
+		lineNumber = 189;
+		location = Wiiji;
+		modificationTime = 231383520.369747;
+		state = 2;
+	};
+	B25C6B020DB9D42600A9E3E3 /* wiimote_manager.m:210 */ = {
+		isa = PBXFileBreakpoint;
+		actions = (
+		);
+		breakpointStyle = 0;
+		continueAfterActions = 0;
+		countType = 0;
+		delayBeforeContinue = 0;
+		fileReference = B226F1A50D9A8540001374F1 /* wiimote_manager.m */;
+		functionName = "-awakeFromNib";
+		hitCount = 0;
+		ignoreCount = 0;
+		lineNumber = 210;
+		location = Wiiji;
+		modificationTime = 231383520.36992;
+		state = 2;
+	};
+	B25C6B050DB9D49E00A9E3E3 /* wiimote_manager.m:192 */ = {
+		isa = PBXFileBreakpoint;
+		actions = (
+		);
+		breakpointStyle = 0;
+		continueAfterActions = 0;
+		countType = 0;
+		delayBeforeContinue = 0;
+		fileReference = B226F1A50D9A8540001374F1 /* wiimote_manager.m */;
+		functionName = "-awakeFromNib";
+		hitCount = 0;
+		ignoreCount = 0;
+		lineNumber = 192;
+		location = Wiiji;
+		modificationTime = 231383520.370091;
+		state = 2;
+	};
+	B25C6B070DB9D4A400A9E3E3 /* wiimote_manager.m:193 */ = {
+		isa = PBXFileBreakpoint;
+		actions = (
+		);
+		breakpointStyle = 0;
+		continueAfterActions = 0;
+		countType = 0;
+		delayBeforeContinue = 0;
+		fileReference = B226F1A50D9A8540001374F1 /* wiimote_manager.m */;
+		functionName = "-awakeFromNib";
+		hitCount = 0;
+		ignoreCount = 0;
+		lineNumber = 193;
+		location = Wiiji;
+		modificationTime = 231383520.370261;
+		state = 2;
+	};
+	B25C6B090DB9D4A500A9E3E3 /* wiimote_manager.m:194 */ = {
+		isa = PBXFileBreakpoint;
+		actions = (
+		);
+		breakpointStyle = 0;
+		continueAfterActions = 0;
+		countType = 0;
+		delayBeforeContinue = 0;
+		fileReference = B226F1A50D9A8540001374F1 /* wiimote_manager.m */;
+		functionName = "-awakeFromNib";
+		hitCount = 0;
+		ignoreCount = 0;
+		lineNumber = 194;
+		location = Wiiji;
+		modificationTime = 231383520.370429;
+		state = 2;
+	};
+	B25C6B0B0DB9D4A600A9E3E3 /* wiimote_manager.m:195 */ = {
+		isa = PBXFileBreakpoint;
+		actions = (
+		);
+		breakpointStyle = 0;
+		continueAfterActions = 0;
+		countType = 0;
+		delayBeforeContinue = 0;
+		fileReference = B226F1A50D9A8540001374F1 /* wiimote_manager.m */;
+		functionName = "-awakeFromNib";
+		hitCount = 0;
+		ignoreCount = 0;
+		lineNumber = 195;
+		location = Wiiji;
+		modificationTime = 231383520.3706;
+		state = 2;
+	};
+	B25C6B150DB9D54300A9E3E3 /* wiimote_manager.m:182 */ = {
+		isa = PBXFileBreakpoint;
+		actions = (
+		);
+		breakpointStyle = 0;
+		continueAfterActions = 0;
+		countType = 0;
+		delayBeforeContinue = 0;
+		fileReference = B226F1A50D9A8540001374F1 /* wiimote_manager.m */;
+		functionName = "-awakeFromNib";
+		hitCount = 0;
+		ignoreCount = 0;
+		lineNumber = 182;
+		location = Wiiji;
+		modificationTime = 231383520.370771;
+		state = 2;
+	};
+	B26B65F80DA90E3700BD58B4 /* wiijoy_icon_12.png */ = {
+		uiCtxt = {
+			sepNavWindowFrame = "{{19, 0}, {833, 746}}";
+		};
+	};
+	B27F14F20DCAA76200A885F7 /* WiijiUpdater.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {878, 574}}";
+			sepNavSelRange = "{203, 0}";
+			sepNavVisRange = "{0, 306}";
+			sepNavWindowFrame = "{{9, 132}, {937, 646}}";
+		};
+	};
+	B27F14F30DCAA76200A885F7 /* WiijiUpdater.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {950, 938}}";
+			sepNavSelRange = "{1153, 0}";
+			sepNavVisRange = "{290, 2018}";
+			sepNavWindowFrame = "{{9, 132}, {937, 646}}";
+		};
+	};
+	B28B4D660DB2560D005F5A8D /* Wiiji */ = {
+		activeExec = 0;
+		executables = (
+			B28B4D680DB2560D005F5A8D /* Wiiji */,
+		);
+	};
+	B28B4D680DB2560D005F5A8D /* Wiiji */ = {
+		isa = PBXExecutable;
+		activeArgIndices = (
+		);
+		argumentStrings = (
+		);
+		autoAttachOnCrash = 1;
+		breakpointsEnabled = 0;
+		configStateDict = {
+		};
+		customDataFormattersEnabled = 1;
+		debuggerPlugin = GDBDebugging;
+		disassemblyDisplayState = 0;
+		dylibVariantSuffix = "";
+		enableDebugStr = 1;
+		environmentEntries = (
+		);
+		executableSystemSymbolLevel = 0;
+		executableUserSymbolLevel = 0;
+		libgmallocEnabled = 0;
+		name = Wiiji;
+		savedGlobals = {
+		};
+		sourceDirectories = (
+		);
+		variableFormatDictionary = {
+		};
+	};
+	B28B4D690DB2560D005F5A8D /* Wiiji-Info.plist */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {774, 651}}";
+			sepNavSelRange = "{927, 0}";
+			sepNavVisRange = "{0, 945}";
+			sepNavVisRect = "{{0, 0}, {1064, 641}}";
+			sepNavWindowFrame = "{{393, 32}, {833, 746}}";
+		};
+	};
+	B2A9A1B20DC029B4004AA694 /* wiimote_manager.m:678 */ = {
+		isa = PBXFileBreakpoint;
+		actions = (
+		);
+		breakpointStyle = 0;
+		continueAfterActions = 0;
+		countType = 0;
+		delayBeforeContinue = 0;
+		fileReference = B226F1A50D9A8540001374F1 /* wiimote_manager.m */;
+		functionName = "-willStopDiscovery";
+		hitCount = 0;
+		ignoreCount = 0;
+		lineNumber = 678;
+		location = Wiiji;
+		modificationTime = 231383520.373323;
+		state = 2;
+	};
+	B2A9A1B40DC029B9004AA694 /* wiimote_manager.m:672 */ = {
+		isa = PBXFileBreakpoint;
+		actions = (
+		);
+		breakpointStyle = 0;
+		continueAfterActions = 0;
+		countType = 0;
+		delayBeforeContinue = 0;
+		fileReference = B226F1A50D9A8540001374F1 /* wiimote_manager.m */;
+		functionName = "-willStopDiscovery";
+		hitCount = 0;
+		ignoreCount = 0;
+		lineNumber = 672;
+		location = Wiiji;
+		modificationTime = 231383520.373493;
+		state = 2;
+	};
+	B2B1B9140DB3B7020033257C /* wiimote_manager.m:525 */ = {
+		isa = PBXFileBreakpoint;
+		actions = (
+		);
+		breakpointStyle = 0;
+		continueAfterActions = 0;
+		countType = 0;
+		delayBeforeContinue = 0;
+		fileReference = B226F1A50D9A8540001374F1 /* wiimote_manager.m */;
+		functionName = "-buttonChanged:isPressed:controllerID:";
+		hitCount = 0;
+		ignoreCount = 0;
+		lineNumber = 525;
+		location = Wiiji;
+		modificationTime = 231383520.368993;
+		state = 1;
+	};
+	B2E108A50DA9C4F0003E963D /* wiimote_manager.m:405 */ = {
+		isa = PBXFileBreakpoint;
+		actions = (
+		);
+		breakpointStyle = 0;
+		continueAfterActions = 0;
+		countType = 0;
+		delayBeforeContinue = 0;
+		fileReference = B226F1A50D9A8540001374F1 /* wiimote_manager.m */;
+		functionName = "-tableView:willDisplayCell:forTableColumn:row:";
+		hitCount = 0;
+		ignoreCount = 0;
+		lineNumber = 405;
+		modificationTime = 231383520.36865;
+		state = 2;
+	};
+	B2E109770DA9FDA9003E963D /* wiijoy_icon_0.png */ = {
+		uiCtxt = {
+			sepNavWindowFrame = "{{15, 207}, {750, 534}}";
+		};
+	};
+	B2EB4C5C0DBF0871003C55C8 /* wiimote_manager.m:586 */ = {
+		isa = PBXFileBreakpoint;
+		actions = (
+		);
+		breakpointStyle = 0;
+		continueAfterActions = 0;
+		countType = 0;
+		delayBeforeContinue = 0;
+		fileReference = B226F1A50D9A8540001374F1 /* wiimote_manager.m */;
+		functionName = "-joyStickChanged:tiltX:tiltY:controllerID:";
+		hitCount = 0;
+		ignoreCount = 0;
+		lineNumber = 586;
+		modificationTime = 231383520.373151;
+		state = 2;
+	};
+}

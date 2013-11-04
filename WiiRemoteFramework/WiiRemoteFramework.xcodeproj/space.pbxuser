@@ -1,0 +1,216 @@
+// !$*UTF8*$!
+{
+	0867D690FE84028FC02AAC07 /* Project object */ = {
+		activeArchitecture = i386;
+		activeBuildConfigurationName = Release;
+		activeTarget = 8DC2EF4F0486A6940098B216 /* WiiRemoteFramework */;
+		addToTargets = (
+			8DC2EF4F0486A6940098B216 /* WiiRemoteFramework */,
+		);
+		breakpoints = (
+			B226F22D0D9A94DC001374F1 /* WiiRemoteDiscovery.m:254 */,
+			B259A2100DBD8977003ECE51 /* WiiRemoteDiscovery.m:129 */,
+			B259A2120DBD897B003ECE51 /* WiiRemoteDiscovery.m:128 */,
+		);
+		codeSenseManager = B20EF79E0D9925B600B0300A /* Code sense */;
+		perUserDictionary = {
+			PBXConfiguration.PBXFileTableDataSource3.PBXFileTableDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXFileDataSource_Filename_ColumnID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					20,
+					243,
+					20,
+					48,
+					43,
+					43,
+					20,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXFileDataSource_FiletypeID,
+					PBXFileDataSource_Filename_ColumnID,
+					PBXFileDataSource_Built_ColumnID,
+					PBXFileDataSource_ObjectSize_ColumnID,
+					PBXFileDataSource_Errors_ColumnID,
+					PBXFileDataSource_Warnings_ColumnID,
+					PBXFileDataSource_Target_ColumnID,
+				);
+			};
+			PBXConfiguration.PBXTargetDataSource.PBXTargetDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXFileDataSource_Filename_ColumnID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					20,
+					203,
+					60,
+					20,
+					48,
+					43,
+					43,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXFileDataSource_FiletypeID,
+					PBXFileDataSource_Filename_ColumnID,
+					PBXTargetDataSource_PrimaryAttribute,
+					PBXFileDataSource_Built_ColumnID,
+					PBXFileDataSource_ObjectSize_ColumnID,
+					PBXFileDataSource_Errors_ColumnID,
+					PBXFileDataSource_Warnings_ColumnID,
+				);
+			};
+			PBXPerProjectTemplateStateSaveDate = 231391013;
+			PBXWorkspaceStateSaveDate = 231391013;
+		};
+		sourceControlManager = B20EF79D0D9925B600B0300A /* Source Control */;
+		userBuildSettings = {
+		};
+	};
+	089C1667FE841158C02AAC07 /* English */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {781, 664}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 98}";
+			sepNavWindowFrame = "{{226, 98}, {840, 736}}";
+		};
+	};
+	53144A860B30492D00757188 /* COPYRIGHT.txt */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {4532, 664}}";
+			sepNavSelRange = "{721, 0}";
+			sepNavVisRange = "{0, 1476}";
+			sepNavWindowFrame = "{{249, 77}, {840, 736}}";
+		};
+	};
+	53144A8B0B30495700757188 /* HISTORY.txt */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1070, 756}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 2348}";
+			sepNavWindowFrame = "{{180, 140}, {840, 736}}";
+		};
+	};
+	5351D50B0B2D34DA00F86B96 /* WiiRemote.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1382, 3080}}";
+			sepNavSelRange = "{2476, 0}";
+			sepNavVisRange = "{1963, 1170}";
+			sepNavWindowFrame = "{{579, 38}, {958, 746}}";
+		};
+	};
+	5351D50C0B2D34DA00F86B96 /* WiiRemote.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1376, 21112}}";
+			sepNavSelRange = "{14162, 0}";
+			sepNavVisRange = "{13477, 1502}";
+			sepNavWindowFrame = "{{290, 32}, {958, 746}}";
+		};
+	};
+	5351D50D0B2D34DA00F86B96 /* WiiRemoteDiscovery.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {512, 684}}";
+			sepNavSelRange = "{553, 0}";
+			sepNavVisRange = "{0, 924}";
+			sepNavVisRect = "{{0, 0}, {801, 385}}";
+			sepNavWindowFrame = "{{406, 22}, {571, 756}}";
+		};
+	};
+	5351D50E0B2D34DA00F86B96 /* WiiRemoteDiscovery.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {815, 3822}}";
+			sepNavSelRange = "{3140, 0}";
+			sepNavVisRange = "{2762, 734}";
+			sepNavVisRect = "{{0, 0}, {835, 673}}";
+			sepNavWindowFrame = "{{747, 38}, {874, 746}}";
+		};
+	};
+	53A1C0E60B9D85E800AEE7A2 /* WiiRemotePrivate.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {781, 910}}";
+			sepNavSelRange = "{652, 0}";
+			sepNavVisRange = "{0, 1411}";
+			sepNavWindowFrame = "{{29, 246}, {840, 736}}";
+		};
+	};
+	8DC2EF4F0486A6940098B216 /* WiiRemoteFramework */ = {
+		activeExec = 0;
+	};
+	8DC2EF5A0486A6940098B216 /* Info.plist */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {801, 663}}";
+			sepNavSelRange = "{190, 0}";
+			sepNavVisRange = "{0, 785}";
+			sepNavVisRect = "{{0, 0}, {801, 663}}";
+			sepNavWindowFrame = "{{203, 10}, {840, 736}}";
+		};
+	};
+	B20EF79D0D9925B600B0300A /* Source Control */ = {
+		isa = PBXSourceControlManager;
+		fallbackIsa = XCSourceControlManager;
+		isSCMEnabled = 0;
+		scmConfiguration = {
+		};
+	};
+	B20EF79E0D9925B600B0300A /* Code sense */ = {
+		isa = PBXCodeSenseManager;
+		indexTemplatePath = "";
+	};
+	B226F22D0D9A94DC001374F1 /* WiiRemoteDiscovery.m:254 */ = {
+		isa = PBXFileBreakpoint;
+		actions = (
+		);
+		breakpointStyle = 0;
+		continueAfterActions = 0;
+		countType = 0;
+		delayBeforeContinue = 0;
+		fileReference = 5351D50E0B2D34DA00F86B96 /* WiiRemoteDiscovery.m */;
+		functionName = "-test";
+		hitCount = 0;
+		ignoreCount = 0;
+		lineNumber = 254;
+		location = WiiRemote;
+		modificationTime = 231383521.584779;
+		state = 0;
+	};
+	B23A19E40DB77F3D00E28F9C /* wiimote_types.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {676, 871}}";
+			sepNavSelRange = "{347, 0}";
+			sepNavVisRange = "{0, 1258}";
+			sepNavWindowFrame = "{{682, 20}, {735, 943}}";
+		};
+	};
+	B259A2100DBD8977003ECE51 /* WiiRemoteDiscovery.m:129 */ = {
+		isa = PBXFileBreakpoint;
+		actions = (
+		);
+		breakpointStyle = 0;
+		continueAfterActions = 0;
+		countType = 0;
+		delayBeforeContinue = 0;
+		fileReference = 5351D50E0B2D34DA00F86B96 /* WiiRemoteDiscovery.m */;
+		functionName = "-close";
+		hitCount = 0;
+		ignoreCount = 0;
+		lineNumber = 129;
+		location = WiiRemote;
+		modificationTime = 231383521.595644;
+		state = 0;
+	};
+	B259A2120DBD897B003ECE51 /* WiiRemoteDiscovery.m:128 */ = {
+		isa = PBXFileBreakpoint;
+		actions = (
+		);
+		breakpointStyle = 0;
+		continueAfterActions = 0;
+		countType = 0;
+		delayBeforeContinue = 0;
+		fileReference = 5351D50E0B2D34DA00F86B96 /* WiiRemoteDiscovery.m */;
+		functionName = "-close";
+		hitCount = 0;
+		ignoreCount = 0;
+		lineNumber = 128;
+		location = WiiRemote;
+		modificationTime = 231383521.596819;
+		state = 0;
+	};
+}
