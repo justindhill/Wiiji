@@ -62,7 +62,6 @@
 */
 
 #include <wiimote_types.h>
-#import "WiijiUpdater.h"
 #import "wiimote_manager.h"
 
 #define desiredVirtualHIDVersion	@"1.1"
