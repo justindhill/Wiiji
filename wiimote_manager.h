@@ -14,7 +14,8 @@
 #define kMyDriversIOKitClassName 	"com_veltrop_taylor_driver_virtualhid"
 #define maxNumWiimotes					4
 
-@interface wiimote_manager : NSObject {
+@interface wiimote_manager : NSObject <NSMenuDelegate>
+{
 	WiiRemoteDiscovery *_wii_discovery;
 	WiiRemote* _wiimote[maxNumWiimotes];
 	//io_connect_t	_connect;
@@ -31,7 +32,8 @@
 }
 
 @property (nonatomic, strong) IBOutlet NSMenu *mainMenu;
-@property (nonatomic, strong) IBOutlet NSMenuItem* scanMenuTextItem;
+@property (nonatomic, strong) IBOutlet NSMenu *statusBarMenu;
+@property (nonatomic, strong) NSMenuItem* scanMenuTextItem;
 @property (nonatomic, strong) IBOutlet NSWindow* prefWindow;
 @property (nonatomic, strong) IBOutlet NSWindow* aboutWindow;
 @property (nonatomic, strong) IBOutlet NSWindow* helpWindow;
@@ -40,6 +42,7 @@
 @property (nonatomic, strong) IBOutlet NSButton* KBEnabledButton;
 @property (nonatomic, strong) IBOutlet NSButton* UpdateCheckEnabledButton;
 @property (nonatomic, strong) IBOutlet NSTextField* prefHelpText;
+@property (nonatomic, strong) IBOutlet NSMenuItem *item;
 
 - (id) init;
 - (void) dealloc;

@@ -117,6 +117,7 @@ int bindings[maxNumWiimotes][WiiNumberOfButtons] = {
 };
 
 @implementation wiimote_manager
+
 - (id)init
 {
 	_isUsingKBEmu = _isVirtualHIDOpen = _isSettingPreferences = NO;
@@ -209,11 +210,10 @@ int bindings[maxNumWiimotes][WiiNumberOfButtons] = {
 
 	NSStatusBar *bar = [NSStatusBar systemStatusBar];
 	wii_menu = [bar statusItemWithLength:35];//NSVariableStatusItemLength , NSSquareStatusItemLength
+    [wii_menu setMenu:self.statusBarMenu];
 
 	if (!icons[0])
 		[wii_menu setTitle: @"Wii"];
-	[wii_menu setHighlightMode:YES];
-	[wii_menu setMenu:self.mainMenu];
 	[wii_menu setImage:icons[0]];
 		
 	_isUsingKBEmu = [self.KBEnabledButton state] == NSOnState;
@@ -633,6 +633,17 @@ int bindings[maxNumWiimotes][WiiNumberOfButtons] = {
 	}	
 }
 
+- (IBAction)stopAction:(id)sender;
+{
+    [_wii_discovery stop];
+    
+}
+
+- (BOOL)validateMenuItem:(NSMenuItem *)menuItem
+{
+    return YES;
+}
+
 #pragma mark -
 #pragma mark WiiRemoteDiscovery delegates
 - (void) willStartWiimoteConnections
@@ -642,7 +653,17 @@ int bindings[maxNumWiimotes][WiiNumberOfButtons] = {
 
 - (void) willStartDiscovery
 {
-	[self.scanMenuTextItem setTitle:@"SCANNING... Click to stop"];
+    if (self.scanMenuTextItem)
+    {
+        [self.statusBarMenu removeItem:self.scanMenuTextItem];
+        self.scanMenuTextItem = nil;
+    }
+    
+    NSMenuItem *item = [[NSMenuItem alloc] initWithTitle:@"Scanning, click to stop" action:@selector(stopAction:) keyEquivalent:@""];
+    [item setEnabled:YES];
+    [self.statusBarMenu insertItem:item atIndex:0];
+    
+    self.scanMenuTextItem = item;
 	if (animationTimer) {
 		[animationTimer invalidate];
 	}
@@ -651,11 +672,12 @@ int bindings[maxNumWiimotes][WiiNumberOfButtons] = {
 
 - (void) willStopDiscovery
 {
-	[self.scanMenuTextItem setTitle:@"Rescan for Wiimotes"];
 	if (animationTimer)  {
 		[animationTimer invalidate];
 		animationTimer = nil;
 	}
+	[self.scanMenuTextItem setTitle:@"Rescan for Wiimotes"];
+    self.scanMenuTextItem.action = @selector(tryAgain:);
 
 	int i;
 	for (i = 0; i < maxNumWiimotes; i++) {

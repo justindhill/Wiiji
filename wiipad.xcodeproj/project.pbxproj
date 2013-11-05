@@ -23,7 +23,7 @@
 		B2707ECD0DB31C3E00FC34FC /* wiijoy_icon_1.png in Resources */ = {isa = PBXBuildFile; fileRef = B2E109780DA9FDA9003E963D /* wiijoy_icon_1.png */; };
 		B2707ECE0DB31C3E00FC34FC /* wiijoy_icon_2.png in Resources */ = {isa = PBXBuildFile; fileRef = B2E109790DA9FDA9003E963D /* wiijoy_icon_2.png */; };
 		B2707ECF0DB31C3E00FC34FC /* appicon.icns in Resources */ = {isa = PBXBuildFile; fileRef = B24C5B9B0DAB16AF00E65D6A /* appicon.icns */; };
-		FC9F6696182869B000DD603C /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC9F6694182869B000DD603C /* MainMenu.xib */; };
+		FC9F669818286F7400DD603C /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC9F669718286F7400DD603C /* MainMenu.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,7 +81,7 @@
 		B2E109780DA9FDA9003E963D /* wiijoy_icon_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = wiijoy_icon_1.png; path = Art/wiijoy_icon_1.png; sourceTree = "<group>"; };
 		B2E109790DA9FDA9003E963D /* wiijoy_icon_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = wiijoy_icon_2.png; path = Art/wiijoy_icon_2.png; sourceTree = "<group>"; };
 		B2ED29370DA210550005EC9A /* WiiRemote.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WiiRemote.framework; path = WiiRemoteFramework/build/Release/WiiRemote.framework; sourceTree = "<group>"; };
-		FC9F6695182869B000DD603C /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		FC9F669718286F7400DD603C /* MainMenu.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainMenu.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,7 +103,7 @@
 				B23A19DA0DB77E5400E28F9C /* wiimote_types.h */,
 				B226F1A40D9A8540001374F1 /* wiimote_manager.h */,
 				B226F1A50D9A8540001374F1 /* wiimote_manager.m */,
-				FC9F6694182869B000DD603C /* MainMenu.xib */,
+				FC9F669718286F7400DD603C /* MainMenu.xib */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -271,7 +271,7 @@
 				B2707ECF0DB31C3E00FC34FC /* appicon.icns in Resources */,
 				B24CE9B10DBB264D007C34A8 /* image.png in Resources */,
 				B250A18C0DC855120010C7B2 /* ChangeLog.txt in Resources */,
-				FC9F6696182869B000DD603C /* MainMenu.xib in Resources */,
+				FC9F669818286F7400DD603C /* MainMenu.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -288,17 +288,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		FC9F6694182869B000DD603C /* MainMenu.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				FC9F6695182869B000DD603C /* English */,
-			);
-			name = MainMenu.xib;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		B28B4D6A0DB2560E005F5A8D /* Debug */ = {
