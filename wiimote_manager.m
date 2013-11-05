@@ -61,11 +61,9 @@
  Should the framework go InTo virtualHID?
 */
 
-#include <wiimote_types.h>
 #import "wiimote_manager.h"
 
 #define desiredVirtualHIDVersion	@"1.1"
-
 #define prefHelpString @"Click on a row in the above table to edit it."
 
 // these indices corespond to wiimote_types.h
@@ -118,6 +116,7 @@ int bindings[maxNumWiimotes][WiiNumberOfButtons] = {
 
 @implementation wiimote_manager
 
+#pragma mark - Life cycle
 - (id)init
 {
 	_isUsingKBEmu = _isVirtualHIDOpen = _isSettingPreferences = NO;
@@ -126,9 +125,6 @@ int bindings[maxNumWiimotes][WiiNumberOfButtons] = {
 		NSRunCriticalAlertPanel(@"Can't Initialize", 
 					@"Wiiji cant initialize discovery.\nPerhaps you don't have bluetooth hardware.",
 					@"OK", nil, nil);
-		//[NSApp terminate];
-		//return nil;
-		//_wii_discovery = nil;
 	}
 	else {
 		[_wii_discovery setDelegate:self];
@@ -140,8 +136,6 @@ int bindings[maxNumWiimotes][WiiNumberOfButtons] = {
 		_wiimote[i] = nil;
 	}
 	
-	animationTimer = nil;
-		
 	return self;
 }
 
@@ -156,22 +150,14 @@ int bindings[maxNumWiimotes][WiiNumberOfButtons] = {
 
 	if (_wii_discovery != nil) {
 		if ([_wii_discovery isDiscovering]) {
-	//		[_wii_discovery stop];
 			[_wii_discovery close];
 		}
 	}
 	
 	[self closeVirtualDriver];
-	
-	// delete images
-	
-	// delete menu item
 }
 
-- (void) dealloc
-{
-	[self cleanUp];
-}
+
 
 -(void)awakeFromNib
 {
@@ -209,7 +195,7 @@ int bindings[maxNumWiimotes][WiiNumberOfButtons] = {
 	}
 
 	NSStatusBar *bar = [NSStatusBar systemStatusBar];
-	wii_menu = [bar statusItemWithLength:35];//NSVariableStatusItemLength , NSSquareStatusItemLength
+	wii_menu = [bar statusItemWithLength:35];
     [wii_menu setMenu:self.statusBarMenu];
 
 	if (!icons[0])
@@ -235,9 +221,20 @@ int bindings[maxNumWiimotes][WiiNumberOfButtons] = {
 	
 	if (_wii_discovery != nil)
 		[_wii_discovery start];
-	//	NSLog(@"Press 1 button and 2 button simultaneously");
 }
 
+- (void) dealloc
+{
+	[self cleanUp];
+}
+
+- (void)applicationWillTerminate:(NSNotification *)aNotification
+{
+	//NSLog(@"applicationWillTerminate");
+	[self cleanUp];
+}
+
+#pragma mark - Preferences
 - (void) saveKeyBindings
 {
 	int i,j;
@@ -267,55 +264,24 @@ int bindings[maxNumWiimotes][WiiNumberOfButtons] = {
 	}
 }
 
-#pragma mark -
-#pragma mark OSX Application Delegation Stuff
-- (void)applicationWillTerminate:(NSNotification *)aNotification
-{
-	//NSLog(@"applicationWillTerminate");
-	[self cleanUp];
-}
+
 
 #pragma mark -
 #pragma mark GUI Delegates, DataSources, CallBacks, etc.
 - (void)tick
 {
-	// [scanMenuAnimatedView drawRect:[scanMenuAnimatedView frame]];
-	//	[scanMenuAnimatedView setNeedsDisplay:YES];
-	//	[scanMenuAnimatedView display];	
-	//	[mainMenu update];
 	static int i = 0;
 	NSImage *img = icons[i];
-	//NSLog(@"%d",i);
-	//[window makeKeyAndOrderFront:self];
-	//[NSApp activateIgnoringOtherApps:YES];
-	//[window orderFrontRegardless];
 	[wii_menu setImage:img];
 	i++;
 	if (i >= 4)
 		i = 0;
-
-	
-	// TODO: if the menu is open, it does not redraw the menubar icon!
-	//[[wii_menu view] drawRect:[[wii_menu view] frame]];
-	//[[wii_menu view] setNeedsDisplay:YES];
-	//[[wii_menu view] display];
-	//[mainMenu update];
-}
-
-- (IBAction)stopScanDoConnect:(id)sender
-{
-	if (_wii_discovery != nil) {
-		[_wii_discovery stop];
-		[_wii_discovery connectToFoundDevices];
-		[_wii_discovery close];
-	}
 }
 
 - (IBAction)tryAgain:(id)sender
 {
 	if (_wii_discovery != nil) {
 		if ([_wii_discovery isDiscovering]) {
-			//[self stopScanDoConnect:self];
 			[_wii_discovery close];
 		}
 		else {
@@ -733,19 +699,12 @@ int bindings[maxNumWiimotes][WiiNumberOfButtons] = {
 	[wiimote setLEDEnabled:the_id];
 	[wiimote setControllerID:the_id];
 	
-	// TODO: 10.4 doesnt support hidden on menuitems.  we should delete and add them to the menu instead, but that requires extra code
-	//[[mainMenu itemWithTag:99] setHidden:NO];
-	//[[mainMenu itemWithTag:the_id] setHidden:NO];
 	NSMenuItem* item = [self.mainMenu itemWithTag:i+500];
 	if (item) {
 		[item setEnabled:YES];
 		[item setState:NSOnState];
 	} 
 	
-	// TODO: redraw the menu (in the case it is stil open it does not redraw!)
-	//[mainMenu itemChanged:[mainMenu itemWithTag:the_id]];
-	//[mainMenu update];
-	 
 	if ([self.HIDEnabledButton state])
 		[self syncVirtualDrivers];
 	

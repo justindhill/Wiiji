@@ -10,6 +10,7 @@
 
 #import <Cocoa/Cocoa.h>
 #import <WiiRemote/WiiRemoteDiscovery.h>
+#include <wiimote_types.h>
 
 #define kMyDriversIOKitClassName 	"com_veltrop_taylor_driver_virtualhid"
 #define maxNumWiimotes					4
@@ -59,7 +60,6 @@
 #pragma mark -
 #pragma mark GUI Delegates, DataSources, CallBacks, etc.
 - (void)tick;
-- (IBAction)stopScanDoConnect:(id)sender;
 - (IBAction)tryAgain:(id)sender;
 - (IBAction)disconnect:(id)sender;
 - (IBAction)setIsUsingKBEmu:(id)sender;
