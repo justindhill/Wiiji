@@ -290,6 +290,11 @@ int bindings[maxNumWiimotes][WiiNumberOfButtons] = {
 	}
 }
 
+- (IBAction)stopAction:(id)sender;
+{
+    [_wii_discovery stop];
+}
+
 - (IBAction)disconnect:(id)sender
 {
 	int the_id = [sender tag] - 500;
@@ -599,16 +604,7 @@ int bindings[maxNumWiimotes][WiiNumberOfButtons] = {
 	}	
 }
 
-- (IBAction)stopAction:(id)sender;
-{
-    [_wii_discovery stop];
-    
-}
 
-- (BOOL)validateMenuItem:(NSMenuItem *)menuItem
-{
-    return YES;
-}
 
 #pragma mark -
 #pragma mark WiiRemoteDiscovery delegates
