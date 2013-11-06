@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>03FC71F6-82DA-4863-A4B6-D3A04EDE76A4</string>
+	<key>IDESourceControlProjectName</key>
+	<string>wiipad</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>3CC8D4D7-6ABE-4A12-B597-7FE38C3EEC0D</key>
+		<string>https://github.com/justindhill/wiiji.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>wiipad.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>3CC8D4D7-6ABE-4A12-B597-7FE38C3EEC0D</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/justindhill/wiiji.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>3CC8D4D7-6ABE-4A12-B597-7FE38C3EEC0D</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>3CC8D4D7-6ABE-4A12-B597-7FE38C3EEC0D</string>
+			<key>IDESourceControlWCCName</key>
+			<string>version-1</string>
+		</dict>
+	</array>
+</dict>
+</plist>
