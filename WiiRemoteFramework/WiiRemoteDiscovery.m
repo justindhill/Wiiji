@@ -22,7 +22,6 @@
 		// 2. it checks for the availability of the BT hardware
 		if (IOBluetoothLocalDeviceAvailable() == FALSE)
 		{
-			[self release];
 			self = nil;
 			
 			//[NSException raise:NSGenericException format:@"Bluetooth hardware not available!!!"];
@@ -33,11 +32,6 @@
 	return self;
 }
 
-- (void) dealloc
-{	
-	//NSLog(@"Wiimote Discovery released");
-	[super dealloc];
-}
 
 - (id) delegate
 {
@@ -82,12 +76,10 @@
 
 	IOReturn status = [_inquiry start];
 	if (status == kIOReturnSuccess) {
-		[_inquiry retain];
 	} else {
 		// not likely to happen, but we handle it anyway
 		NSLog (@"Error: Inquiry did not start, error %d", status);
 		[_inquiry setDelegate:nil];
-		[_inquiry release];
 		_inquiry = nil;
 	}
 	
@@ -127,7 +119,6 @@
 			LogIOReturn (ret);
 		
 		[_inquiry setDelegate:nil];
-		[_inquiry release];
 		_inquiry = nil;
 	}
 	
@@ -224,7 +215,7 @@
 			[_delegate willStartWiimoteConnections];
 			//NSLog(@"...");
 		
-			WiiRemote * wii = [[[WiiRemote alloc] init] autorelease];
+			WiiRemote * wii = [[WiiRemote alloc] init];
 			IOReturn ret = [wii connectTo:device];
 			
 			if (ret == kIOReturnSuccess)

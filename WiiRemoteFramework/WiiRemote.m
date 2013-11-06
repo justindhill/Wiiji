@@ -109,7 +109,6 @@ typedef enum {
 - (void) dealloc
 {
 	NSLogDebug (@"Wii released");
-	[super dealloc];
 }
 
 - (void) setDelegate:(id) delegate
@@ -512,7 +511,6 @@ typedef enum {
 
 	// no longer a delegate
 	[statusTimer invalidate];
-	[statusTimer release];
 	statusTimer = nil;
 	
 	return ret;
