@@ -288,7 +288,7 @@ typedef enum {
 
 	NSLogDebug (@"Updating Report Mode");
 	// Set the report type the Wiimote should send.
-	unsigned char cmd[] = {0x12, 0x04, 0x30}; // Just buttons.
+	unsigned char cmd[] = {0x12, 0x02, 0x30}; // Just buttons.
 	
 	/*
 		There are numerous status report types that can be requested.
