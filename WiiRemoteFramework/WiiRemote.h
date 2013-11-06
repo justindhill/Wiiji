@@ -69,7 +69,7 @@ typedef enum {
 	WiiNumberOfJoystics
 } WiiJoyStickType;
 
-@interface WiiRemote : NSObject
+@interface WiiRemote : NSObject <IOBluetoothL2CAPChannelDelegate>
 {
 #ifdef DEBUG
 	BOOL _dump;

@@ -205,7 +205,7 @@ typedef enum {
 	for (i=0; i<10 ; i++) {
 		ret = [_cchan writeSync:buf length:length];		
 		if (ret != kIOReturnSuccess) {
-			NSLogDebug(@"Write Error for command 0x%x:", buf[1], ret);		
+			NSLogDebug(@"Write Error for command 0x%x:", buf[1]);		
 			LogIOReturn (ret);
 //			[self closeConnection];
 			usleep (10000);		// TODO: this is bad...
@@ -224,10 +224,10 @@ typedef enum {
 
 - (NSString *) address
 {
-	return [_wiiDevice getAddressString];
+	return [_wiiDevice addressString];
 }
 
-- (void) setMotionSensorEnabled:(BOOL) enabled
+- (void)setMotionSensorEnabled:(BOOL)enabled
 {
 	if (enabled) {
 		NSLogDebug (@"Set motion sensor enabled");
@@ -249,12 +249,12 @@ typedef enum {
 	[self updateReportMode];
 }
 
-- (void) setLEDEnabled:(int)led
+- (void)setLEDEnabled:(int)led
 {
 	[self setLEDEnabled1:(led==0 || led==4 || led==6 || led==8) enabled2:(led==1 || led==4 || led==6 || led==7 || led==8) enabled3:(led==2 || led==5 || led==6 || led==7 || led==8) enabled4:(led==3 || led==5 || led==7 || led==8)];
 }
 
-- (void) setLEDEnabled1:(BOOL) enabled1 enabled2:(BOOL) enabled2 enabled3:(BOOL) enabled3 enabled4:(BOOL) enabled4
+- (void)setLEDEnabled1:(BOOL)enabled1 enabled2:(BOOL)enabled2 enabled3:(BOOL)enabled3 enabled4:(BOOL)enabled4
 {
 	unsigned char cmd[] = {0x11, 0x00};
 	if (_isVibrationEnabled)	cmd[1] |= 0x01;
@@ -289,7 +289,7 @@ typedef enum {
 
 	NSLogDebug (@"Updating Report Mode");
 	// Set the report type the Wiimote should send.
-	unsigned char cmd[] = {0x12, 0x02, 0x30}; // Just buttons.
+	unsigned char cmd[] = {0x12, 0x04, 0x30}; // Just buttons.
 	
 	/*
 		There are numerous status report types that can be requested.
@@ -428,7 +428,7 @@ typedef enum {
 	unsigned char cmd [22];
 
 	if (length > 16)
-		NSLog (@"Error! Trying to write more than 16 bytes of data (length=%i)", length);
+		NSLog (@"Error! Trying to write more than 16 bytes of data (length=%i)", (int)length);
 
 	memset (cmd, 0, 22);
 	memcpy (cmd + 6, data, length);
@@ -479,6 +479,7 @@ typedef enum {
 
 - (IOReturn) closeConnection
 {
+    NSLog(@"Connection closed");
 	IOReturn ret = 0;
 	_opened = NO;
 
@@ -489,15 +490,21 @@ typedef enum {
 	_delegate = nil;
 
 	// cam: set delegate to nil
-	[_cchan setDelegate:nil];
-	ret = [_cchan closeChannel];
-	_cchan = nil;
-	LogIOReturn (ret);
+    if (_cchan && _cchan.delegate)
+    {
+        [_cchan setDelegate:nil];
+        ret = [_cchan closeChannel];
+        _cchan = nil;
+        LogIOReturn (ret);
+    }
 	
-	[_ichan setDelegate:nil];
-	ret = [_ichan closeChannel];
-	_ichan = nil;
-	LogIOReturn (ret);
+    if (_ichan && _ichan.delegate)
+    {
+        [_ichan setDelegate:nil];
+        ret = [_ichan closeChannel];
+        _ichan = nil;
+        LogIOReturn (ret);
+    }
 
 	ret = [_wiiDevice closeConnection];
 	_wiiDevice = nil;
@@ -787,6 +794,10 @@ typedef enum {
 			}			
 
 			break;
+        case WiiExpNotAttached:
+            break;
+        default:
+            break;
 	}
 } // handleExtensionData
 
@@ -1409,12 +1420,12 @@ typedef enum {
 
 - (void) l2capChannelOpenComplete:(IOBluetoothL2CAPChannel*) l2capChannel status:(IOReturn) error
 {
-	NSLogDebug (@"l2capChannelOpenComplete (PSM:0x%x)", [l2capChannel getPSM]);
+	NSLogDebug (@"l2capChannelOpenComplete (PSM:0x%x)", l2capChannel.PSM);
 }
 
 - (void) l2capChannelClosed:(IOBluetoothL2CAPChannel*) l2capChannel
 {
-	NSLogDebug (@"l2capChannelClosed (PSM:0x%x)", [l2capChannel getPSM]);
+	NSLogDebug (@"l2capChannelClosed (PSM:0x%x)", l2capChannel.PSM);
 
 	if (l2capChannel == _cchan)
 		_cchan = nil;
@@ -1481,7 +1492,7 @@ typedef enum {
 
 @implementation WiiRemote (Private)
 
-- (IOBluetoothL2CAPChannel *) openL2CAPChannelWithPSM:(BluetoothL2CAPPSM) psm delegate:(id) delegate
+- (IOBluetoothL2CAPChannel *) openL2CAPChannelWithPSM:(BluetoothL2CAPPSM)psm delegate:(id)delegate
 {
 	IOBluetoothL2CAPChannel * channel = nil;
 	IOReturn ret = kIOReturnSuccess;

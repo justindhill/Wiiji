@@ -6,7 +6,7 @@
 //  Copyright 2006 __MyCompanyName__. All rights reserved.
 //
 
-#import <IOBluetooth/objc/IOBluetoothDevice.h>
+#import <IOBluetooth/IOBluetooth.h>
 #import "WiiRemoteDiscovery.h"
 
 
@@ -20,7 +20,7 @@
 		// cam: calling IOBluetoothLocalDeviceAvailable has two advantages:
 		// 1. it sets up a event source in the run loop (bug for C version of the bluetooth api )
 		// 2. it checks for the availability of the BT hardware
-		if (IOBluetoothLocalDeviceAvailable () == FALSE)
+		if (IOBluetoothLocalDeviceAvailable() == FALSE)
 		{
 			[self release];
 			self = nil;
@@ -32,12 +32,6 @@
 	
 	return self;
 }
-/*
-+ (WiiRemoteDiscovery*) discoveryWithDelegate:(id) delegate
-{
-	// cam: when using this convention, we must autorelease the returned object
-	return [[[WiiRemoteDiscovery alloc] initWithDelegate:delegate] autorelease];
-}*/
 
 - (void) dealloc
 {	
@@ -72,9 +66,6 @@
 	if (!_delegate) {
 		NSLog(@"Warning: starting WiiRemoteDiscovery without delegate set");
 	}
-//	else {
-//		[_delegate willStartDiscovery];
-//	}
 	
 	// to start all over again, first ensure its all closed and free
 	[self close];
