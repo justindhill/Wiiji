@@ -1,2 +1,0 @@
-/Users/space/Documents/dev/Wii Remote/wiiji-1.1.1/Wiiji/WiiRemoteFramework/WiiRemote.m: In function '-[WiiRemote setLEDEnabled1:enabled2:enabled3:enabled4:]':
-/Users/space/Documents/dev/Wii Remote/wiiji-1.1.1/Wiiji/WiiRemoteFramework/WiiRemote.m:271: warning: unused variable 'ret'

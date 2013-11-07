@@ -145,8 +145,8 @@ AHdpaW1vdGVfbWFuYWdlcg
                             <binding destination="513" name="value" keyPath="values.UpdateCheckEnabled" id="1061">
                                 <dictionary key="options">
                                     <bool key="NSConditionallySetsEnabled" value="YES"/>
-                                    <bool key="NSAlwaysPresentsApplicationModalAlerts" value="NO"/>
                                     <integer key="NSMultipleValuesPlaceholder" value="-1"/>
+                                    <bool key="NSAlwaysPresentsApplicationModalAlerts" value="NO"/>
                                     <bool key="NSAllowsEditingMultipleValuesSelection" value="YES"/>
                                     <integer key="NSNullPlaceholder" value="-1"/>
                                     <bool key="NSConditionallySetsHidden" value="NO"/>

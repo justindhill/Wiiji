@@ -3,14 +3,12 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 42;
+	objectVersion = 46;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		B24CE9B10DBB264D007C34A8 /* image.png in Resources */ = {isa = PBXBuildFile; fileRef = B24CE9B00DBB264D007C34A8 /* image.png */; };
 		B250A18C0DC855120010C7B2 /* ChangeLog.txt in Resources */ = {isa = PBXBuildFile; fileRef = B250A18B0DC855120010C7B2 /* ChangeLog.txt */; };
-		B2707EBE0DB31C1800FC34FC /* WiiRemote.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = B2ED29370DA210550005EC9A /* WiiRemote.framework */; };
-		B2707EC10DB31C2200FC34FC /* WiiRemote.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2ED29370DA210550005EC9A /* WiiRemote.framework */; };
 		B2707EC20DB31C2200FC34FC /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B24A54C00DA7A2D7002DEAC4 /* IOKit.framework */; };
 		B2707EC40DB31C2800FC34FC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; };
 		B2707EC50DB31C2800FC34FC /* wiimote_manager.m in Sources */ = {isa = PBXBuildFile; fileRef = B226F1A50D9A8540001374F1 /* wiimote_manager.m */; };
@@ -23,36 +21,36 @@
 		B2707ECD0DB31C3E00FC34FC /* wiijoy_icon_1.png in Resources */ = {isa = PBXBuildFile; fileRef = B2E109780DA9FDA9003E963D /* wiijoy_icon_1.png */; };
 		B2707ECE0DB31C3E00FC34FC /* wiijoy_icon_2.png in Resources */ = {isa = PBXBuildFile; fileRef = B2E109790DA9FDA9003E963D /* wiijoy_icon_2.png */; };
 		B2707ECF0DB31C3E00FC34FC /* appicon.icns in Resources */ = {isa = PBXBuildFile; fileRef = B24C5B9B0DAB16AF00E65D6A /* appicon.icns */; };
+		FC0B2488182B175D00D96E0B /* WiiRemote.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC0B2485182B173E00D96E0B /* WiiRemote.framework */; };
+		FC5502C4182B1AED009D4685 /* WiiRemote.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = FC0B2485182B173E00D96E0B /* WiiRemote.framework */; };
 		FC9F669818286F7400DD603C /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC9F669718286F7400DD603C /* MainMenu.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		B22FA0890DAC97CC0039AB3D /* PBXContainerItemProxy */ = {
+		FC0B2484182B173E00D96E0B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = B22FA0810DAC97CC0039AB3D /* WiiRemoteFramework.xcodeproj */;
+			containerPortal = FC0B2480182B173E00D96E0B /* WiiRemoteFramework.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 8DC2EF5B0486A6940098B216;
+			remoteInfo = WiiRemoteFramework;
+		};
+		FC5502C2182B1AD5009D4685 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FC0B2480182B173E00D96E0B /* WiiRemoteFramework.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 8DC2EF4F0486A6940098B216;
 			remoteInfo = WiiRemoteFramework;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		B2707ED70DB31C5300FC34FC /* CopyFiles */ = {
+		FC34648F182B181F00AB06BA /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				B2707EBE0DB31C1800FC34FC /* WiiRemote.framework in CopyFiles */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		B2707ED80DB31C5300FC34FC /* CopyFiles */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 13;
-			files = (
+				FC5502C4182B1AED009D4685 /* WiiRemote.framework in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -64,7 +62,6 @@
 		32CA4F630368D1EE00C91783 /* wiipad_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = wiipad_Prefix.pch; sourceTree = "<group>"; };
 		B226F1A40D9A8540001374F1 /* wiimote_manager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = wiimote_manager.h; sourceTree = "<group>"; };
 		B226F1A50D9A8540001374F1 /* wiimote_manager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = wiimote_manager.m; sourceTree = "<group>"; };
-		B22FA0810DAC97CC0039AB3D /* WiiRemoteFramework.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = WiiRemoteFramework.xcodeproj; path = WiiRemoteFramework/WiiRemoteFramework.xcodeproj; sourceTree = "<group>"; };
 		B22FA0AB0DAC9AF00039AB3D /* com.veltrop.taylor.Wiiji.defaults.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = com.veltrop.taylor.Wiiji.defaults.plist; sourceTree = "<group>"; };
 		B23A19DA0DB77E5400E28F9C /* wiimote_types.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = wiimote_types.h; sourceTree = "<group>"; };
 		B24A54C00DA7A2D7002DEAC4 /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = /System/Library/Frameworks/IOKit.framework; sourceTree = "<absolute>"; };
@@ -80,7 +77,7 @@
 		B2E109770DA9FDA9003E963D /* wiijoy_icon_0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = wiijoy_icon_0.png; path = Art/wiijoy_icon_0.png; sourceTree = "<group>"; };
 		B2E109780DA9FDA9003E963D /* wiijoy_icon_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = wiijoy_icon_1.png; path = Art/wiijoy_icon_1.png; sourceTree = "<group>"; };
 		B2E109790DA9FDA9003E963D /* wiijoy_icon_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = wiijoy_icon_2.png; path = Art/wiijoy_icon_2.png; sourceTree = "<group>"; };
-		B2ED29370DA210550005EC9A /* WiiRemote.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WiiRemote.framework; path = WiiRemoteFramework/build/Release/WiiRemote.framework; sourceTree = "<group>"; };
+		FC0B2480182B173E00D96E0B /* WiiRemoteFramework.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = WiiRemoteFramework.xcodeproj; path = WiiRemoteFramework/WiiRemoteFramework.xcodeproj; sourceTree = "<group>"; };
 		FC9F669718286F7400DD603C /* MainMenu.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainMenu.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -89,7 +86,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B2707EC10DB31C2200FC34FC /* WiiRemote.framework in Frameworks */,
+				FC0B2488182B175D00D96E0B /* WiiRemote.framework in Frameworks */,
 				B2707EC20DB31C2200FC34FC /* IOKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -154,18 +151,9 @@
 			isa = PBXGroup;
 			children = (
 				B24A54C00DA7A2D7002DEAC4 /* IOKit.framework */,
-				B2ED29370DA210550005EC9A /* WiiRemote.framework */,
 				1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		B22FA0820DAC97CC0039AB3D /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				B22FA08A0DAC97CC0039AB3D /* WiiRemote.framework */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 		B24CE9D70DBB2947007C34A8 /* Images */ = {
@@ -186,9 +174,17 @@
 		B2707F110DB3219C00FC34FC /* Depends */ = {
 			isa = PBXGroup;
 			children = (
-				B22FA0810DAC97CC0039AB3D /* WiiRemoteFramework.xcodeproj */,
+				FC0B2480182B173E00D96E0B /* WiiRemoteFramework.xcodeproj */,
 			);
 			name = Depends;
+			sourceTree = "<group>";
+		};
+		FC0B2481182B173E00D96E0B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FC0B2485182B173E00D96E0B /* WiiRemote.framework */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -201,12 +197,12 @@
 				B28B4D630DB2560D005F5A8D /* Resources */,
 				B28B4D640DB2560D005F5A8D /* Sources */,
 				B28B4D650DB2560D005F5A8D /* Frameworks */,
-				B2707ED70DB31C5300FC34FC /* CopyFiles */,
-				B2707ED80DB31C5300FC34FC /* CopyFiles */,
+				FC34648F182B181F00AB06BA /* CopyFiles */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				FC5502C3182B1AD5009D4685 /* PBXTargetDependency */,
 			);
 			name = Wiiji;
 			productName = Wiiji;
@@ -219,9 +215,10 @@
 		29B97313FDCFA39411CA2CEA /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastUpgradeCheck = 0500;
 			};
 			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "wiipad" */;
-			compatibilityVersion = "Xcode 2.4";
+			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 1;
 			knownRegions = (
@@ -234,8 +231,8 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
-					ProductGroup = B22FA0820DAC97CC0039AB3D /* Products */;
-					ProjectRef = B22FA0810DAC97CC0039AB3D /* WiiRemoteFramework.xcodeproj */;
+					ProductGroup = FC0B2481182B173E00D96E0B /* Products */;
+					ProjectRef = FC0B2480182B173E00D96E0B /* WiiRemoteFramework.xcodeproj */;
 				},
 			);
 			projectRoot = "";
@@ -246,11 +243,11 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		B22FA08A0DAC97CC0039AB3D /* WiiRemote.framework */ = {
+		FC0B2485182B173E00D96E0B /* WiiRemote.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
 			path = WiiRemote.framework;
-			remoteRef = B22FA0890DAC97CC0039AB3D /* PBXContainerItemProxy */;
+			remoteRef = FC0B2484182B173E00D96E0B /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -289,11 +286,19 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		FC5502C3182B1AD5009D4685 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = WiiRemoteFramework;
+			targetProxy = FC5502C2182B1AD5009D4685 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
 		B28B4D6A0DB2560E005F5A8D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -320,6 +325,7 @@
 				PREBINDING = NO;
 				PRODUCT_NAME = Wiiji;
 				SDKROOT = macosx;
+				VALID_ARCHS = x86_64;
 				WRAPPER_EXTENSION = app;
 				ZERO_LINK = YES;
 			};
@@ -328,7 +334,7 @@
 		B28B4D6B0DB2560E005F5A8D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -354,6 +360,7 @@
 				PREBINDING = NO;
 				PRODUCT_NAME = Wiiji;
 				SDKROOT = macosx;
+				VALID_ARCHS = x86_64;
 				WRAPPER_EXTENSION = app;
 				ZERO_LINK = NO;
 			};
@@ -367,6 +374,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				ONLY_ACTIVE_ARCH = YES;
 				PREBINDING = NO;
 				SDKROOT = "$(DEVELOPER_SDK_DIR)/MacOSX10.6.sdk";
 			};
@@ -375,10 +383,6 @@
 		C01FCF5008A954540054247B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = (
-					ppc,
-					i386,
-				);
 				CLANG_ENABLE_OBJC_ARC = YES;
 				GCC_OPTIMIZATION_LEVEL = 3;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;

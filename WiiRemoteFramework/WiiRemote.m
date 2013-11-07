@@ -267,8 +267,7 @@ typedef enum {
 	_isLED3Illuminated = enabled3;
 	_isLED4Illuminated = enabled4;
 	
-	IOReturn ret = [self sendCommand:cmd length:2];
-	LogIOReturn (ret);
+	LogIOReturn ([self sendCommand:cmd length:2]);
 }
 
 - (void) updateReportMode
