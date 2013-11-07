@@ -35,7 +35,6 @@
  3 Bluetooth mouse gets choppy sometimes after connect (framework)
  4 Better preferences window
  5 Real help guide
- 6 wiimotes dont always connect, especcialy PPC (framework or kernel)
 
  TODO: FEATURES
  1 analog joysticks to support keyboard controls
