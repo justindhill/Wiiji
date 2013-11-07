@@ -451,19 +451,6 @@ int bindings[maxNumWiimotes][WiiNumberOfButtons] = {
 	[ws openURL: url];
 }
 
-- (IBAction)checkForUpdates:(id)sender
-{		
-//	[NSThread detachNewThreadSelector:@selector(doUpdate:) toTarget:[WiijiUpdater class] withObject:sender];
-}
-
-- (void) setAutoUpdate:(int)state
-{
-	[self.UpdateCheckEnabledButton setState:state];
-	NSUserDefaults* defs = [NSUserDefaults standardUserDefaults];
-	[defs setValue:[NSNumber numberWithInt:state] forKey:@"UpdateCheckEnabled"];
-	[defs synchronize];
-}
-
 #pragma mark -
 #pragma mark WiiRemote delegates
 

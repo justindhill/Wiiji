@@ -41,7 +41,6 @@
 @property (nonatomic, strong) IBOutlet NSTableView* keyTable;
 @property (nonatomic, strong) IBOutlet NSButton* HIDEnabledButton;
 @property (nonatomic, strong) IBOutlet NSButton* KBEnabledButton;
-@property (nonatomic, strong) IBOutlet NSButton* UpdateCheckEnabledButton;
 @property (nonatomic, strong) IBOutlet NSTextField* prefHelpText;
 @property (nonatomic, strong) IBOutlet NSMenuItem *item;
 
@@ -71,8 +70,6 @@
 - (void)tableViewSelectionDidChange:(NSNotification *)aNotification;
 - (IBAction)openWindow:(id)sender;
 - (IBAction)donate:(id)sender;
-- (IBAction)checkForUpdates:(id)sender;
-- (void) setAutoUpdate:(int)state;
 
 #pragma mark -
 #pragma mark WiiRemote delegates
