@@ -31,7 +31,6 @@ AHdpaW1vdGVfbWFuYWdlcg
         </customObject>
         <window title="Wiiji Preferences" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" deferred="NO" oneShot="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" animationBehavior="default" id="429" userLabel="Preferences">
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES"/>
-            <windowPositionMask key="initialPositionMask" leftStrut="YES" bottomStrut="YES"/>
             <rect key="contentRect" x="734" y="423" width="275" height="295"/>
             <rect key="screenRect" x="0.0" y="0.0" width="1280" height="778"/>
             <view key="contentView" id="430">
@@ -116,7 +115,7 @@ AHdpaW1vdGVfbWFuYWdlcg
                             <autoresizingMask key="autoresizingMask"/>
                         </scroller>
                         <scroller key="verticalScroller" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="1108">
-                            <rect key="frame" x="218" y="17" width="16" height="177"/>
+                            <rect key="frame" x="219" y="17" width="15" height="177"/>
                             <autoresizingMask key="autoresizingMask"/>
                         </scroller>
                         <tableHeaderView key="headerView" id="1107">
@@ -138,8 +137,7 @@ AHdpaW1vdGVfbWFuYWdlcg
         </window>
         <window title="About Wiiji" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" deferred="NO" oneShot="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" animationBehavior="default" id="449" userLabel="About">
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES"/>
-            <windowPositionMask key="initialPositionMask" leftStrut="YES" bottomStrut="YES"/>
-            <rect key="contentRect" x="469" y="633" width="483" height="395"/>
+            <rect key="contentRect" x="379" y="239" width="483" height="395"/>
             <rect key="screenRect" x="0.0" y="0.0" width="1280" height="778"/>
             <view key="contentView" id="450">
                 <rect key="frame" x="0.0" y="0.0" width="483" height="395"/>
@@ -352,8 +350,7 @@ Thanks to Jasen Jacobsen and Ian Rickard for contributions to WiiRemoteFramework
         <userDefaultsController representsSharedInstance="YES" id="513" userLabel="Shared User Defaults Controller"/>
         <window title="Wiiji Help" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" deferred="NO" oneShot="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" animationBehavior="default" id="531" userLabel="Help">
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES"/>
-            <windowPositionMask key="initialPositionMask" leftStrut="YES" bottomStrut="YES"/>
-            <rect key="contentRect" x="469" y="703" width="483" height="325"/>
+            <rect key="contentRect" x="370" y="184" width="483" height="325"/>
             <rect key="screenRect" x="0.0" y="0.0" width="1280" height="778"/>
             <view key="contentView" id="532">
                 <rect key="frame" x="0.0" y="0.0" width="483" height="325"/>
