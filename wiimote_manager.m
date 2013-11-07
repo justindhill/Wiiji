@@ -210,8 +210,9 @@ int bindings[maxNumWiimotes][WiiNumberOfButtons] = {
 		
 	[self loadKeyBindings];
 
-	for (i = 0; i < maxNumWiimotes; i++) {
-		NSMenuItem* item = [self.mainMenu itemWithTag:i+500];
+	for (i = 500; i < 500 + maxNumWiimotes; i++) {
+		NSMenuItem* item = [self.statusBarMenu itemWithTag:i];
+        
 		if (item) {
 			[item setEnabled:NO];
 			[item setState:NSOffState];
@@ -263,7 +264,16 @@ int bindings[maxNumWiimotes][WiiNumberOfButtons] = {
 	}
 }
 
-
+#pragma mark - Menu delegate
+- (BOOL)validateMenuItem:(NSMenuItem *)menuItem
+{
+    if (menuItem.tag >= 500)
+    {
+        int index = menuItem.tag % 500;
+        return (_wiimote[index] != nil);
+    }
+    return YES;
+}
 
 #pragma mark -
 #pragma mark GUI Delegates, DataSources, CallBacks, etc.
@@ -544,12 +554,11 @@ int bindings[maxNumWiimotes][WiiNumberOfButtons] = {
 - (void) wiiRemoteDisconnected:(IOBluetoothDevice*)device remote:(WiiRemote*)remote controllerID:(int)cID
 {
 	_wiimote[cID] = nil;
-	NSMenuItem* item = [self.mainMenu itemWithTag:cID+500];
+	NSMenuItem* item = [self.statusBarMenu itemWithTag:cID+500];
 	if (item) {
 		[item setEnabled:NO];
 		[item setState:NSOffState];
 	} 
-	//[mainMenu update];
 		
 	int i;
 	for (i=0; i < maxNumWiimotes; i++) {
@@ -558,9 +567,7 @@ int bindings[maxNumWiimotes][WiiNumberOfButtons] = {
 	}
 	if (i == maxNumWiimotes)
 		[wii_menu setImage:icons[0]];
-		
-//	[self syncVirtualDrivers];
-}	
+}
 
 - (void)expansionPortChanged:(NSNotification *)nc
 {	
@@ -681,7 +688,7 @@ int bindings[maxNumWiimotes][WiiNumberOfButtons] = {
 	[wiimote setLEDEnabled:the_id];
 	[wiimote setControllerID:the_id];
 	
-	NSMenuItem* item = [self.mainMenu itemWithTag:i+500];
+	NSMenuItem* item = [self.statusBarMenu itemWithTag:i+500];
 	if (item) {
 		[item setEnabled:YES];
 		[item setState:NSOnState];

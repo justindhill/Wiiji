@@ -32,6 +32,7 @@
 	BOOL _isVirtualHIDOpen;
 }
 
+@property (nonatomic, strong) NSArray *wiimoteMenuItems;
 @property (nonatomic, strong) IBOutlet NSMenu *mainMenu;
 @property (nonatomic, strong) IBOutlet NSMenu *statusBarMenu;
 @property (nonatomic, strong) NSMenuItem* scanMenuTextItem;
@@ -42,7 +43,6 @@
 @property (nonatomic, strong) IBOutlet NSButton* HIDEnabledButton;
 @property (nonatomic, strong) IBOutlet NSButton* KBEnabledButton;
 @property (nonatomic, strong) IBOutlet NSTextField* prefHelpText;
-@property (nonatomic, strong) IBOutlet NSMenuItem *item;
 
 - (id) init;
 - (void) dealloc;
